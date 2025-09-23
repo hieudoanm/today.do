@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "angular.ng-template",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "ms-azuretools.vscode-docker",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

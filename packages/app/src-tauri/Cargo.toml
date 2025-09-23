@@ -1,0 +1,25 @@
+[package]
+name = "app"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
+license = "GPL-3.0"
+repository = "git@github.com:hieudoanm/today.do.git"
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.5.5", features = [] }
+
+[dependencies]
+log = { version = "=0.4.29" }
+serde_json = { version = "=1.0.149" }
+serde = { version = "=1.0.228", features = ["derive"] }
+tauri = { version = "=2.10.2", features = [] }
+tauri-plugin-log = { version = "=2.8.0" }
