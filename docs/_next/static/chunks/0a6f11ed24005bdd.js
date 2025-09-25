@@ -1,16 +1,16 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	5175,
+	938,
 	(e, t, n) => {
 		'use strict';
-		(Object.defineProperty(n, '__esModule', { value: !0 }),
+		Object.defineProperty(n, '__esModule', { value: !0 }),
 			Object.defineProperty(n, 'default', {
 				enumerable: !0,
 				get: function () {
 					return d;
 				},
-			}));
-		let r = e.r(5929),
+			});
+		let r = e.r(4431),
 			o = 'undefined' == typeof window,
 			i = o ? () => {} : r.useLayoutEffect,
 			l = o ? () => {} : r.useEffect;
@@ -24,7 +24,7 @@
 			}
 			if (o) {
 				var a;
-				(null == t || null == (a = t.mountedInstances) || a.add(e.children), d());
+				null == t || null == (a = t.mountedInstances) || a.add(e.children), d();
 			}
 			return (
 				i(() => {
@@ -57,37 +57,37 @@
 			);
 		}
 	},
-	2521,
+	4158,
 	(e, t, n) => {
 		'use strict';
-		(Object.defineProperty(n, '__esModule', { value: !0 }),
+		Object.defineProperty(n, '__esModule', { value: !0 }),
 			Object.defineProperty(n, 'AmpStateContext', {
 				enumerable: !0,
 				get: function () {
 					return r;
 				},
-			}));
-		let r = e.r(2879)._(e.r(5929)).default.createContext({});
+			});
+		let r = e.r(2879)._(e.r(4431)).default.createContext({});
 	},
-	1869,
+	2341,
 	(e, t, n) => {
 		'use strict';
 		function r(e) {
 			let { ampFirst: t = !1, hybrid: n = !1, hasQuery: r = !1 } = void 0 === e ? {} : e;
 			return t || (n && r);
 		}
-		(Object.defineProperty(n, '__esModule', { value: !0 }),
+		Object.defineProperty(n, '__esModule', { value: !0 }),
 			Object.defineProperty(n, 'isInAmpMode', {
 				enumerable: !0,
 				get: function () {
 					return r;
 				},
-			}));
+			});
 	},
-	3602,
+	9634,
 	(e, t, n) => {
 		'use strict';
-		(Object.defineProperty(n, '__esModule', { value: !0 }),
+		Object.defineProperty(n, '__esModule', { value: !0 }),
 			!(function (e, t) {
 				for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
 			})(n, {
@@ -97,19 +97,19 @@
 				defaultHead: function () {
 					return c;
 				},
-			}));
+			});
 		let r = e.r(2879),
 			o = e.r(7602),
 			i = e.r(5280),
-			l = o._(e.r(5929)),
-			d = r._(e.r(5175)),
-			a = e.r(2521),
-			u = e.r(973),
-			s = e.r(1869);
+			l = o._(e.r(4431)),
+			d = r._(e.r(938)),
+			a = e.r(4158),
+			u = e.r(2567),
+			s = e.r(2341);
 		function c(e) {
 			void 0 === e && (e = !1);
 			let t = [(0, i.jsx)('meta', { charSet: 'utf-8' }, 'charset')];
-			return (e || t.push((0, i.jsx)('meta', { name: 'viewport', content: 'width=device-width' }, 'viewport')), t);
+			return e || t.push((0, i.jsx)('meta', { name: 'viewport', content: 'width=device-width' }, 'viewport')), t;
 		}
 		function f(e, t) {
 			return 'string' == typeof t || 'number' == typeof t
@@ -123,7 +123,7 @@
 						)
 					: e.concat(t);
 		}
-		e.r(9151);
+		e.r(7969);
 		let p = ['name', 'httpEquiv', 'charSet', 'itemProp'];
 		function h(e, t) {
 			let { inAmpMode: n } = t;
@@ -189,10 +189,10 @@
 			Object.assign(n.default, n),
 			(t.exports = n.default));
 	},
-	4086,
+	7996,
 	(e, t, n) => {
 		'use strict';
-		(Object.defineProperty(n, '__esModule', { value: !0 }),
+		Object.defineProperty(n, '__esModule', { value: !0 }),
 			!(function (e, t) {
 				for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
 			})(n, {
@@ -211,38 +211,38 @@
 				setRequestMeta: function () {
 					return i;
 				},
-			}));
+			});
 		let r = Symbol.for('NextInternalRequestMeta');
 		function o(e, t) {
 			let n = e[r] || {};
 			return 'string' == typeof t ? n[t] : n;
 		}
 		function i(e, t) {
-			return ((e[r] = t), t);
+			return (e[r] = t), t;
 		}
 		function l(e, t, n) {
 			let r = o(e);
-			return ((r[t] = n), i(e, r));
+			return (r[t] = n), i(e, r);
 		}
 		function d(e, t) {
 			let n = o(e);
-			return (delete n[t], i(e, n));
+			return delete n[t], i(e, n);
 		}
 	},
-	180,
+	8561,
 	(e, t, n) => {
 		'use strict';
-		(Object.defineProperty(n, '__esModule', { value: !0 }),
+		Object.defineProperty(n, '__esModule', { value: !0 }),
 			Object.defineProperty(n, 'default', {
 				enumerable: !0,
 				get: function () {
 					return s;
 				},
-			}));
+			});
 		let r = e.r(2879),
 			o = e.r(5280),
-			i = r._(e.r(5929)),
-			l = r._(e.r(3602)),
+			i = r._(e.r(4431)),
+			l = r._(e.r(9634)),
 			d = {
 				400: 'Bad Request',
 				404: 'This page could not be found',
@@ -255,7 +255,7 @@
 				l = o && o.statusCode ? o.statusCode : i ? i.statusCode : 404;
 			if ('undefined' != typeof window) n = window.location.hostname;
 			else if (r) {
-				let { getRequestMeta: t } = e.r(4086),
+				let { getRequestMeta: t } = e.r(7996),
 					o = t(r, 'initURL');
 				o && (n = new URL(o).hostname);
 			}
@@ -335,13 +335,13 @@
 				});
 			}
 		}
-		((s.displayName = 'ErrorPage'),
+		(s.displayName = 'ErrorPage'),
 			(s.getInitialProps = a),
 			(s.origGetInitialProps = a),
 			('function' == typeof n.default || ('object' == typeof n.default && null !== n.default)) &&
 				void 0 === n.default.__esModule &&
 				(Object.defineProperty(n.default, '__esModule', { value: !0 }),
 				Object.assign(n.default, n),
-				(t.exports = n.default)));
+				(t.exports = n.default));
 	},
 ]);
