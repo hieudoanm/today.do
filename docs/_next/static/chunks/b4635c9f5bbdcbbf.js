@@ -16,11 +16,11 @@
 			var r = Object.keys(e);
 			if (Object.getOwnPropertySymbols) {
 				var n = Object.getOwnPropertySymbols(e);
-				t &&
+				(t &&
 					(n = n.filter(function (t) {
 						return Object.getOwnPropertyDescriptor(e, t).enumerable;
 					})),
-					r.push.apply(r, n);
+					r.push.apply(r, n));
 			}
 			return r;
 		}
@@ -30,7 +30,7 @@
 				t % 2
 					? s(Object(r), !0).forEach(function (t) {
 							var n, a, o;
-							(n = e),
+							((n = e),
 								(a = t),
 								(o = r[t]),
 								(a = (function (e) {
@@ -47,7 +47,7 @@
 									return 'symbol' == typeof t ? t : t + '';
 								})(a)) in n
 									? Object.defineProperty(n, a, { value: o, enumerable: !0, configurable: !0, writable: !0 })
-									: (n[a] = o);
+									: (n[a] = o));
 						})
 					: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -88,7 +88,7 @@
 						if (Object.getOwnPropertySymbols) {
 							var o = Object.getOwnPropertySymbols(e);
 							for (n = 0; n < o.length; n++)
-								(r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+								((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
 						}
 						return a;
 					})(e, o),
@@ -154,7 +154,7 @@
 							[a, o] = (0, r.useState)(null);
 						(0, r.useEffect)(() => {
 							let e = indexedDB.open(t, 1);
-							(e.onupgradeneeded = (e) => {
+							((e.onupgradeneeded = (e) => {
 								let t = e.target.result;
 								t.objectStoreNames.contains(n) ||
 									t
@@ -166,8 +166,8 @@
 								}),
 								(e.onerror = (e) => {
 									console.error('IndexedDB error:', e);
-								});
-						}, []);
+								}));
+						}, [t, n]);
 						let l = (e, t) =>
 							e.completed !== t.completed
 								? e.completed
@@ -180,49 +180,49 @@
 								new Promise((e, t) => {
 									if (!a) return e([]);
 									let r = a.transaction(n, 'readonly').objectStore(n).getAll();
-									(r.onsuccess = () => {
+									((r.onsuccess = () => {
 										let t = r.result;
-										t.sort(l), e(t);
+										(t.sort(l), e(t));
 									}),
 										(r.onerror = () => {
 											var e;
 											return t(Error((null == (e = r.error) ? void 0 : e.message) || 'Failed to fetch tasks'));
-										});
+										}));
 								}),
 							add: (e) =>
 								new Promise((t, r) => {
 									if (!a) return;
 									let o = new Date().toISOString(),
 										l = a.transaction(n, 'readwrite');
-									l.objectStore(n).add({ text: e, completed: !1, updatedAt: o }),
+									(l.objectStore(n).add({ text: e, completed: !1, updatedAt: o }),
 										(l.oncomplete = () => t()),
 										(l.onerror = () => {
 											var e;
 											return r(Error((null == (e = l.error) ? void 0 : e.message) || 'Failed to add task'));
-										});
+										}));
 								}),
 							update: (e) =>
 								new Promise((t, r) => {
 									if (!a) return;
 									let o = new Date().toISOString(),
 										l = a.transaction(n, 'readwrite');
-									l.objectStore(n).put({ ...e, updatedAt: o }),
+									(l.objectStore(n).put({ ...e, updatedAt: o }),
 										(l.oncomplete = () => t()),
 										(l.onerror = () => {
 											var e;
 											return r(Error((null == (e = l.error) ? void 0 : e.message) || 'Failed to update task'));
-										});
+										}));
 								}),
 							remove: (e) =>
 								new Promise((t, r) => {
 									if (!a) return;
 									let o = a.transaction(n, 'readwrite');
-									o.objectStore(n).delete(e),
+									(o.objectStore(n).delete(e),
 										(o.oncomplete = () => t()),
 										(o.onerror = () => {
 											var e;
 											return r(Error((null == (e = o.error) ? void 0 : e.message) || 'Failed to delete task'));
-										});
+										}));
 								}),
 						};
 					})({ databaseName: 'TasksDB', storeName: 'tasks' }),
@@ -230,15 +230,15 @@
 					[c, d] = (0, r.useState)('');
 				(0, r.useEffect)(() => {
 					e && n().then(i);
-				}, [e]);
+				}, [e, n]);
 				let p = async () => {
 						c.trim() && (await a(c.trim()), d(''), i(await n()));
 					},
 					f = async (e) => {
-						await o({ ...e, completed: !e.completed }), i(await n());
+						(await o({ ...e, completed: !e.completed }), i(await n()));
 					},
 					b = async (e) => {
-						await l(e), i(await n());
+						(await l(e), i(await n()));
 					};
 				return (0, t.jsx)('div', {
 					className: 'bg-base-200 flex h-screen flex-col items-center py-0 md:min-h-screen md:py-10',
@@ -304,10 +304,10 @@
 	},
 	5075,
 	(e, t, r) => {
-		(window.__NEXT_P = window.__NEXT_P || []).push(['/', () => e.r(7856)]),
+		((window.__NEXT_P = window.__NEXT_P || []).push(['/', () => e.r(7856)]),
 			t.hot &&
 				t.hot.dispose(function () {
 					window.__NEXT_P.push(['/']);
-				});
+				}));
 	},
 ]);

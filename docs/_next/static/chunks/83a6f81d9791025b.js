@@ -3,13 +3,13 @@
 	6862,
 	(e, t, o) => {
 		'use strict';
-		Object.defineProperty(o, '__esModule', { value: !0 }),
+		(Object.defineProperty(o, '__esModule', { value: !0 }),
 			Object.defineProperty(o, 'default', {
 				enumerable: !0,
 				get: function () {
 					return d;
 				},
-			});
+			}));
 		let r = e.r(2879),
 			l = e.r(5280),
 			u = r._(e.r(4431)),
@@ -24,12 +24,12 @@
 				return (0, l.jsx)(e, { ...t });
 			}
 		}
-		(d.origGetInitialProps = a),
+		((d.origGetInitialProps = a),
 			(d.getInitialProps = a),
 			('function' == typeof o.default || ('object' == typeof o.default && null !== o.default)) &&
 				void 0 === o.default.__esModule &&
 				(Object.defineProperty(o.default, '__esModule', { value: !0 }),
 				Object.assign(o.default, o),
-				(t.exports = o.default));
+				(t.exports = o.default)));
 	},
 ]);

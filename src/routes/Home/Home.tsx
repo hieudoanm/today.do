@@ -14,7 +14,7 @@ export const Home: FC = () => {
 	useEffect(() => {
 		if (!database) return;
 		list().then(setTasks);
-	}, [database]);
+	}, [database, list]);
 
 	const handleAdd = async () => {
 		if (!newTask.trim()) return;

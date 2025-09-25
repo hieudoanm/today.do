@@ -34,7 +34,7 @@ export const useIndexedDB = <T>({ databaseName = '', storeName = '' }: { databas
 		request.onerror = (event) => {
 			console.error('IndexedDB error:', event);
 		};
-	}, []);
+	}, [databaseName, storeName]);
 
 	// eslint-disable-next-line
 	const sortItems = (a: any, b: any) => {
