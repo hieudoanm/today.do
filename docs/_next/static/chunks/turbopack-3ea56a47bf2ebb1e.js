@@ -1,7 +1,11 @@
 ((globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
 	{
-		otherChunks: ['static/chunks/f9df84f83ed42558.js', 'static/chunks/3e9b23d18270ef62.js'],
+		otherChunks: [
+			'static/chunks/c1297fede8e1ea95.js',
+			'static/chunks/5ca3aba70cb2e42c.js',
+			'static/chunks/3e9b23d18270ef62.js',
+		],
 		runtimeModuleIds: [5126, 5075],
 	},
 ]),

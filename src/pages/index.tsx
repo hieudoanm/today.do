@@ -1,6 +1,7 @@
 import { Task, useIndexedDB } from '@today.do/hooks/useIndexedDB';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
+import { PiPlus, PiX } from 'react-icons/pi';
 
 const HomePage: NextPage = () => {
 	const { database, list, add, update, remove } = useIndexedDB<Task>({
@@ -39,7 +40,7 @@ const HomePage: NextPage = () => {
 	return (
 		<div className="bg-base-200 flex h-screen flex-col items-center py-0 md:min-h-screen md:py-10">
 			<div className="bg-base-100 h-screen w-full max-w-md rounded-none p-6 shadow-lg md:h-auto md:rounded-2xl">
-				<h1 className="mb-4 text-center text-2xl font-bold">To-Do List</h1>
+				<h1 className="mb-4 text-center text-2xl font-bold">Tasks</h1>
 
 				{/* Input Section */}
 				<div className="mb-4 flex gap-2">
@@ -52,7 +53,7 @@ const HomePage: NextPage = () => {
 						onKeyDown={(e) => e.key === 'Enter' && handleAdd()}
 					/>
 					<button className="btn btn-glass" onClick={handleAdd}>
-						Add
+						<PiPlus />
 					</button>
 				</div>
 
@@ -70,7 +71,7 @@ const HomePage: NextPage = () => {
 								<span className={`text-lg ${todo.completed ? 'text-gray-500 line-through' : ''}`}>{todo.text}</span>
 							</div>
 							<button className="btn btn-sm btn-error" onClick={() => handleDelete(todo.id)}>
-								✕
+								<PiX />
 							</button>
 						</li>
 					))}
