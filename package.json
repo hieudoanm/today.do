@@ -19,7 +19,7 @@
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
 	"packageManager": "pnpm@10.17.1",
 	"scripts": {
-		"predev": "kill-port 3000",
+		"predev": "rimraf .next && kill-port 3000",
 		"dev": "next dev --turbopack",
 		"prebuild": "rimraf docs",
 		"build": "next build --turbopack",

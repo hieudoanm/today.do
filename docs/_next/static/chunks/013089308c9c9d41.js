@@ -257,7 +257,11 @@
 										onChange: (e) => d(e.target.value),
 										onKeyDown: (e) => 'Enter' === e.key && p(),
 									}),
-									(0, t.jsx)('button', { className: 'btn btn-glass', onClick: p, children: (0, t.jsx)(u, {}) }),
+									(0, t.jsx)('button', {
+										className: 'btn btn-primary rounded-full',
+										onClick: p,
+										children: (0, t.jsx)(u, {}),
+									}),
 								],
 							}),
 							(0, t.jsx)('ul', {
@@ -284,7 +288,7 @@
 													],
 												}),
 												(0, t.jsx)('button', {
-													className: 'btn btn-sm btn-error',
+													className: 'btn btn-sm btn-error rounded-full',
 													onClick: () => b(e.id),
 													children: (0, t.jsx)(m, {}),
 												}),

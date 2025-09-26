@@ -51,7 +51,7 @@ export const Home: FC = () => {
 						onChange={(e) => setNewTask(e.target.value)}
 						onKeyDown={(e) => e.key === 'Enter' && handleAdd()}
 					/>
-					<button className="btn btn-glass" onClick={handleAdd}>
+					<button className="btn btn-primary rounded-full" onClick={handleAdd}>
 						<PiPlus />
 					</button>
 				</div>
@@ -69,7 +69,7 @@ export const Home: FC = () => {
 								/>
 								<span className={`text-lg ${todo.completed ? 'text-gray-500 line-through' : ''}`}>{todo.text}</span>
 							</div>
-							<button className="btn btn-sm btn-error" onClick={() => handleDelete(todo.id)}>
+							<button className="btn btn-sm btn-error rounded-full" onClick={() => handleDelete(todo.id)}>
 								<PiX />
 							</button>
 						</li>

@@ -3,7 +3,7 @@
 	{
 		otherChunks: [
 			'static/chunks/b44245e7c47af395.js',
-			'static/chunks/b4635c9f5bbdcbbf.js',
+			'static/chunks/013089308c9c9d41.js',
 			'static/chunks/f79e9bdc7e63e882.js',
 		],
 		runtimeModuleIds: [7244, 5075],
