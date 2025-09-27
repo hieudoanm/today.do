@@ -23,7 +23,7 @@ exports[`Home should match snapshot 1`] = `
           value=""
         />
         <button
-          class="btn btn-primary"
+          class="btn btn-primary rounded-full"
         >
           <svg
             fill="currentColor"
