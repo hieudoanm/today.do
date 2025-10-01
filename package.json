@@ -68,6 +68,6 @@
 		"tailwindcss": "4.1.13",
 		"ts-jest": "29.4.4",
 		"ts-node": "10.9.2",
-		"typescript": "5.9.2"
+		"typescript": "5.9.3"
 	}
 }
