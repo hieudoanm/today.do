@@ -2,9 +2,9 @@
 name = "app"
 version = "0.1.0"
 description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
+license = "GPL-3.0"
+repository = "git@github.com:hieudoanm/today.do.git"
 edition = "2021"
 rust-version = "1.77.2"
 
@@ -18,8 +18,8 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2.4.1", features = [] }
 
 [dependencies]
-serde_json = "1.0"
-serde = { version = "1.0", features = ["derive"] }
-log = "0.4"
-tauri = { version = "2.8.5", features = [] }
-tauri-plugin-log = "2"
+log = { version = "=0.4" }
+serde_json = { version = "=1.0" }
+serde = { version = "=1.0", features = ["derive"] }
+tauri = { version = "=2.8.5", features = [] }
+tauri-plugin-log = { version = "=2" }
