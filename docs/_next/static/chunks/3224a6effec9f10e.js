@@ -4,8 +4,8 @@
 	(e) => {
 		'use strict';
 		e.s(['default', () => f], 7856);
-		var t = e.i(5280),
-			r = e.i(4431),
+		var t = e.i(4601),
+			r = e.i(6960),
 			n = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
 			a = r.default.createContext && r.default.createContext(n),
 			o = ['attr', 'size', 'title'];

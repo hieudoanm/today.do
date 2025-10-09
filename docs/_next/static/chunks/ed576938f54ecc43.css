@@ -1933,6 +1933,7 @@
 		white-space: nowrap;
 		width: max(3rem, min(20rem, 100%));
 		height: var(--size);
+		font-size: max(var(--font-size, 0.875rem), 0.875rem);
 		touch-action: manipulation;
 		border-color: var(--input-color);
 		box-shadow:
@@ -1943,7 +1944,6 @@
 		gap: 0.5rem;
 		padding-left: 0.75rem;
 		padding-right: 0.75rem;
-		font-size: 0.875rem;
 		display: inline-flex;
 		position: relative;
 	}
@@ -2182,6 +2182,14 @@
 		outline-offset: 2px;
 		isolation: isolate;
 		z-index: 1;
+	}
+	@media (pointer: coarse) {
+		@supports (-webkit-touch-callout: none) {
+			.input:focus,
+			.input:focus-within {
+				--font-size: 1rem;
+			}
+		}
 	}
 	fieldset:disabled .input {
 		cursor: not-allowed;

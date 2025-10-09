@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	7996,
+	515,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -40,7 +40,7 @@
 			return (delete r[t], i(e, r));
 		}
 	},
-	8561,
+	3933,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -51,9 +51,9 @@
 				},
 			}));
 		let n = e.r(2879),
-			o = e.r(5280),
-			i = n._(e.r(4431)),
-			l = n._(e.r(9634)),
+			o = e.r(4601),
+			i = n._(e.r(6960)),
+			l = n._(e.r(4892)),
 			s = {
 				400: 'Bad Request',
 				404: 'This page could not be found',
@@ -66,7 +66,7 @@
 				l = o && o.statusCode ? o.statusCode : i ? i.statusCode : 404;
 			if ('undefined' != typeof window) r = window.location.hostname;
 			else if (n) {
-				let { getRequestMeta: t } = e.r(7996),
+				let { getRequestMeta: t } = e.r(515),
 					o = t(n, 'initURL');
 				o && (r = new URL(o).hostname);
 			}
