@@ -26,7 +26,8 @@
 		}
 		((d.origGetInitialProps = a),
 			(d.getInitialProps = a),
-			('function' == typeof o.default || ('object' == typeof o.default && null !== o.default)) &&
+			('function' == typeof o.default ||
+				('object' == typeof o.default && null !== o.default)) &&
 				void 0 === o.default.__esModule &&
 				(Object.defineProperty(o.default, '__esModule', { value: !0 }),
 				Object.assign(o.default, o),

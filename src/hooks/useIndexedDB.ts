@@ -7,7 +7,13 @@ export interface Task {
 	updatedAt: string; // ISO timestamp
 }
 
-export const useIndexedDB = <T>({ databaseName = '', storeName = '' }: { databaseName: string; storeName: string }) => {
+export const useIndexedDB = <T>({
+	databaseName = '',
+	storeName = '',
+}: {
+	databaseName: string;
+	storeName: string;
+}) => {
 	const [database, setDatabase] = useState<IDBDatabase | null>(null);
 
 	useEffect(() => {
@@ -67,7 +73,8 @@ export const useIndexedDB = <T>({ databaseName = '', storeName = '' }: { databas
 				resolve(tasks);
 			};
 
-			request.onerror = () => reject(new Error(request.error?.message || 'Failed to fetch tasks'));
+			request.onerror = () =>
+				reject(new Error(request.error?.message || 'Failed to fetch tasks'));
 		});
 	};
 
@@ -83,7 +90,8 @@ export const useIndexedDB = <T>({ databaseName = '', storeName = '' }: { databas
 			store.add({ text, completed: false, updatedAt: now });
 
 			transaction.oncomplete = () => resolve();
-			transaction.onerror = () => reject(new Error(transaction.error?.message || 'Failed to add task'));
+			transaction.onerror = () =>
+				reject(new Error(transaction.error?.message || 'Failed to add task'));
 		});
 	};
 
@@ -99,7 +107,10 @@ export const useIndexedDB = <T>({ databaseName = '', storeName = '' }: { databas
 			store.put({ ...item, updatedAt: now });
 
 			transaction.oncomplete = () => resolve();
-			transaction.onerror = () => reject(new Error(transaction.error?.message || 'Failed to update task'));
+			transaction.onerror = () =>
+				reject(
+					new Error(transaction.error?.message || 'Failed to update task'),
+				);
 		});
 	};
 
@@ -114,7 +125,10 @@ export const useIndexedDB = <T>({ databaseName = '', storeName = '' }: { databas
 			store.delete(id);
 
 			transaction.oncomplete = () => resolve();
-			transaction.onerror = () => reject(new Error(transaction.error?.message || 'Failed to delete task'));
+			transaction.onerror = () =>
+				reject(
+					new Error(transaction.error?.message || 'Failed to delete task'),
+				);
 		});
 	};
 

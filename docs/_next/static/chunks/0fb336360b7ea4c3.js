@@ -18,13 +18,16 @@
 			let { headManager: t, reduceComponentsToState: n } = e;
 			function d() {
 				if (t && t.mountedInstances) {
-					let o = r.Children.toArray(Array.from(t.mountedInstances).filter(Boolean));
+					let o = r.Children.toArray(
+						Array.from(t.mountedInstances).filter(Boolean),
+					);
 					t.updateHead(n(o, e));
 				}
 			}
 			if (o) {
 				var a;
-				(null == t || null == (a = t.mountedInstances) || a.add(e.children), d());
+				(null == t || null == (a = t.mountedInstances) || a.add(e.children),
+					d());
 			}
 			return (
 				i(() => {
@@ -33,7 +36,9 @@
 						null == t || null == (n = t.mountedInstances) || n.add(e.children),
 						() => {
 							var n;
-							null == t || null == (n = t.mountedInstances) || n.delete(e.children);
+							null == t ||
+								null == (n = t.mountedInstances) ||
+								n.delete(e.children);
 						}
 					);
 				}),
@@ -47,9 +52,13 @@
 				),
 				l(
 					() => (
-						t && t._pendingUpdate && (t._pendingUpdate(), (t._pendingUpdate = null)),
+						t &&
+							t._pendingUpdate &&
+							(t._pendingUpdate(), (t._pendingUpdate = null)),
 						() => {
-							t && t._pendingUpdate && (t._pendingUpdate(), (t._pendingUpdate = null));
+							t &&
+								t._pendingUpdate &&
+								(t._pendingUpdate(), (t._pendingUpdate = null));
 						}
 					),
 				),
@@ -73,7 +82,11 @@
 	(e, t, n) => {
 		'use strict';
 		function r(e) {
-			let { ampFirst: t = !1, hybrid: n = !1, hasQuery: r = !1 } = void 0 === e ? {} : e;
+			let {
+				ampFirst: t = !1,
+				hybrid: n = !1,
+				hasQuery: r = !1,
+			} = void 0 === e ? {} : e;
 			return t || (n && r);
 		}
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
@@ -89,7 +102,8 @@
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
 			!(function (e, t) {
-				for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+				for (var n in t)
+					Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
 			})(n, {
 				default: function () {
 					return y;
@@ -109,7 +123,17 @@
 		function c(e) {
 			void 0 === e && (e = !1);
 			let t = [(0, i.jsx)('meta', { charSet: 'utf-8' }, 'charset')];
-			return (e || t.push((0, i.jsx)('meta', { name: 'viewport', content: 'width=device-width' }, 'viewport')), t);
+			return (
+				e ||
+					t.push(
+						(0, i.jsx)(
+							'meta',
+							{ name: 'viewport', content: 'width=device-width' },
+							'viewport',
+						),
+					),
+				t
+			);
 		}
 		function f(e, t) {
 			return 'string' == typeof t || 'number' == typeof t
@@ -117,7 +141,10 @@
 				: t.type === l.default.Fragment
 					? e.concat(
 							l.default.Children.toArray(t.props.children).reduce(
-								(e, t) => ('string' == typeof t || 'number' == typeof t ? e : e.concat(t)),
+								(e, t) =>
+									'string' == typeof t || 'number' == typeof t
+										? e
+										: e.concat(t),
 								[],
 							),
 						)
@@ -158,7 +185,9 @@
 											else {
 												let e = o.props[t],
 													n = r[t] || new Set();
-												('name' !== t || !l) && n.has(e) ? (i = !1) : (n.add(e), (r[t] = n));
+												('name' !== t || !l) && n.has(e)
+													? (i = !1)
+													: (n.add(e), (r[t] = n));
 											}
 									}
 							}
@@ -183,7 +212,8 @@
 				children: t,
 			});
 		};
-		('function' == typeof n.default || ('object' == typeof n.default && null !== n.default)) &&
+		('function' == typeof n.default ||
+			('object' == typeof n.default && null !== n.default)) &&
 			void 0 === n.default.__esModule &&
 			(Object.defineProperty(n.default, '__esModule', { value: !0 }),
 			Object.assign(n.default, n),
@@ -194,7 +224,8 @@
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
 			!(function (e, t) {
-				for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+				for (var n in t)
+					Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
 			})(n, {
 				NEXT_REQUEST_META: function () {
 					return r;
@@ -263,7 +294,8 @@
 		}
 		let u = {
 			error: {
-				fontFamily: 'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+				fontFamily:
+					'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
 				height: '100vh',
 				textAlign: 'center',
 				display: 'flex',
@@ -292,7 +324,9 @@
 					children: [
 						(0, o.jsx)(l.default, {
 							children: (0, o.jsx)('title', {
-								children: e ? e + ': ' + n : 'Application error: a client-side exception has occurred',
+								children: e
+									? e + ': ' + n
+									: 'Application error: a client-side exception has occurred',
 							}),
 						}),
 						(0, o.jsxs)('div', {
@@ -307,7 +341,13 @@
 												: ''),
 									},
 								}),
-								e ? (0, o.jsx)('h1', { className: 'next-error-h1', style: u.h1, children: e }) : null,
+								e
+									? (0, o.jsx)('h1', {
+											className: 'next-error-h1',
+											style: u.h1,
+											children: e,
+										})
+									: null,
 								(0, o.jsx)('div', {
 									style: u.wrap,
 									children: (0, o.jsxs)('h2', {
@@ -320,7 +360,12 @@
 															'Application error: a client-side exception has occurred',
 															' ',
 															!!this.props.hostname &&
-																(0, o.jsxs)(o.Fragment, { children: ['while loading ', this.props.hostname] }),
+																(0, o.jsxs)(o.Fragment, {
+																	children: [
+																		'while loading ',
+																		this.props.hostname,
+																	],
+																}),
 															' ',
 															'(see the browser console for more information)',
 														],
@@ -338,7 +383,8 @@
 		((s.displayName = 'ErrorPage'),
 			(s.getInitialProps = a),
 			(s.origGetInitialProps = a),
-			('function' == typeof n.default || ('object' == typeof n.default && null !== n.default)) &&
+			('function' == typeof n.default ||
+				('object' == typeof n.default && null !== n.default)) &&
 				void 0 === n.default.__esModule &&
 				(Object.defineProperty(n.default, '__esModule', { value: !0 }),
 				Object.assign(n.default, n),

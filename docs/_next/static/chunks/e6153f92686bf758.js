@@ -5,7 +5,8 @@
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
 			!(function (e, t) {
-				for (var r in t) Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
+				for (var r in t)
+					Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
 			})(r, {
 				NEXT_REQUEST_META: function () {
 					return n;
@@ -74,7 +75,8 @@
 		}
 		let a = {
 			error: {
-				fontFamily: 'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+				fontFamily:
+					'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
 				height: '100vh',
 				textAlign: 'center',
 				display: 'flex',
@@ -103,7 +105,9 @@
 					children: [
 						(0, o.jsx)(l.default, {
 							children: (0, o.jsx)('title', {
-								children: e ? e + ': ' + r : 'Application error: a client-side exception has occurred',
+								children: e
+									? e + ': ' + r
+									: 'Application error: a client-side exception has occurred',
 							}),
 						}),
 						(0, o.jsxs)('div', {
@@ -118,7 +122,13 @@
 												: ''),
 									},
 								}),
-								e ? (0, o.jsx)('h1', { className: 'next-error-h1', style: a.h1, children: e }) : null,
+								e
+									? (0, o.jsx)('h1', {
+											className: 'next-error-h1',
+											style: a.h1,
+											children: e,
+										})
+									: null,
 								(0, o.jsx)('div', {
 									style: a.wrap,
 									children: (0, o.jsxs)('h2', {
@@ -131,7 +141,12 @@
 															'Application error: a client-side exception has occurred',
 															' ',
 															!!this.props.hostname &&
-																(0, o.jsxs)(o.Fragment, { children: ['while loading ', this.props.hostname] }),
+																(0, o.jsxs)(o.Fragment, {
+																	children: [
+																		'while loading ',
+																		this.props.hostname,
+																	],
+																}),
 															' ',
 															'(see the browser console for more information)',
 														],
@@ -149,7 +164,8 @@
 		((u.displayName = 'ErrorPage'),
 			(u.getInitialProps = d),
 			(u.origGetInitialProps = d),
-			('function' == typeof r.default || ('object' == typeof r.default && null !== r.default)) &&
+			('function' == typeof r.default ||
+				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
 				(Object.defineProperty(r.default, '__esModule', { value: !0 }),
 				Object.assign(r.default, r),

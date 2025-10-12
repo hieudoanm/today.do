@@ -27,7 +27,8 @@
 						}
 						function a(e) {
 							if (t === setTimeout) return setTimeout(e, 0);
-							if ((t === u || !t) && setTimeout) return ((t = setTimeout), setTimeout(e, 0));
+							if ((t === u || !t) && setTimeout)
+								return ((t = setTimeout), setTimeout(e, 0));
 							try {
 								return t(e, 0);
 							} catch (n) {
@@ -42,7 +43,11 @@
 							c = !1,
 							l = -1;
 						function f() {
-							c && r && ((c = !1), r.length ? (s = r.concat(s)) : (l = -1), s.length && d());
+							c &&
+								r &&
+								((c = !1),
+								r.length ? (s = r.concat(s)) : (l = -1),
+								s.length && d());
 						}
 						function d() {
 							if (!c) {
@@ -56,7 +61,8 @@
 									(c = !1),
 									(function (e) {
 										if (n === clearTimeout) return clearTimeout(e);
-										if ((n === i || !n) && clearTimeout) return ((n = clearTimeout), clearTimeout(e));
+										if ((n === i || !n) && clearTimeout)
+											return ((n = clearTimeout), clearTimeout(e));
 										try {
 											n(e);
 										} catch (t) {
@@ -75,7 +81,9 @@
 						function y() {}
 						((o.nextTick = function (e) {
 							var t = Array(arguments.length - 1);
-							if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
+							if (arguments.length > 1)
+								for (var n = 1; n < arguments.length; n++)
+									t[n - 1] = arguments[n];
 							(s.push(new p(e, t)), 1 !== s.length || c || a(d));
 						}),
 							(p.prototype.run = function () {
@@ -136,7 +144,8 @@
 		'use strict';
 		var r, o;
 		t.exports =
-			(null == (r = e.g.process) ? void 0 : r.env) && 'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
+			(null == (r = e.g.process) ? void 0 : r.env) &&
+			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
 				: e.r(1326);
 	},
@@ -146,10 +155,20 @@
 		var r = Symbol.for('react.transitional.element');
 		function o(e, t, n) {
 			var o = null;
-			if ((void 0 !== n && (o = '' + n), void 0 !== t.key && (o = '' + t.key), 'key' in t))
+			if (
+				(void 0 !== n && (o = '' + n),
+				void 0 !== t.key && (o = '' + t.key),
+				'key' in t)
+			)
 				for (var u in ((n = {}), t)) 'key' !== u && (n[u] = t[u]);
 			else n = t;
-			return { $$typeof: r, type: e, key: o, ref: void 0 !== (t = n.ref) ? t : null, props: n };
+			return {
+				$$typeof: r,
+				type: e,
+				key: o,
+				ref: void 0 !== (t = n.ref) ? t : null,
+				props: n,
+			};
 		}
 		((n.Fragment = Symbol.for('react.fragment')), (n.jsx = o), (n.jsxs = o));
 	},
@@ -186,11 +205,17 @@
 			v = Object.assign,
 			b = {};
 		function g(e, t, n) {
-			((this.props = e), (this.context = t), (this.refs = b), (this.updater = n || _));
+			((this.props = e),
+				(this.context = t),
+				(this.refs = b),
+				(this.updater = n || _));
 		}
 		function w() {}
 		function E(e, t, n) {
-			((this.props = e), (this.context = t), (this.refs = b), (this.updater = n || _));
+			((this.props = e),
+				(this.context = t),
+				(this.refs = b),
+				(this.updater = n || _));
 		}
 		((g.prototype.isReactComponent = {}),
 			(g.prototype.setState = function (e, t) {
@@ -212,7 +237,13 @@
 			P = Object.prototype.hasOwnProperty;
 		function T(e, t, n) {
 			var r = n.ref;
-			return { $$typeof: o, type: e, key: t, ref: void 0 !== r ? r : null, props: n };
+			return {
+				$$typeof: o,
+				type: e,
+				key: t,
+				ref: void 0 !== r ? r : null,
+				props: n,
+			};
 		}
 		function k(e) {
 			return 'object' == typeof e && null !== e && e.$$typeof === o;
@@ -272,14 +303,21 @@
 								: null != a &&
 									(k(a) &&
 										((s = a),
-										(c = r + (null == a.key || (t && t.key === a.key) ? '' : ('' + a.key).replace(C, '$&/') + '/') + d),
+										(c =
+											r +
+											(null == a.key || (t && t.key === a.key)
+												? ''
+												: ('' + a.key).replace(C, '$&/') + '/') +
+											d),
 										(a = T(s.type, c, s.props))),
 									n.push(a)),
 							1
 						);
 					d = 0;
 					var p = '' === i ? '.' : i + ':';
-					if (j(t)) for (var m = 0; m < t.length; m++) ((f = p + N((i = t[m]), m)), (d += e(i, n, r, f, a)));
+					if (j(t))
+						for (var m = 0; m < t.length; m++)
+							((f = p + N((i = t[m]), m)), (d += e(i, n, r, f, a)));
 					else if (
 						'function' ==
 						typeof (m =
@@ -307,10 +345,12 @@
 													: ((e.status = 'pending'),
 														e.then(
 															function (t) {
-																'pending' === e.status && ((e.status = 'fulfilled'), (e.value = t));
+																'pending' === e.status &&
+																	((e.status = 'fulfilled'), (e.value = t));
 															},
 															function (t) {
-																'pending' === e.status && ((e.status = 'rejected'), (e.reason = t));
+																'pending' === e.status &&
+																	((e.status = 'rejected'), (e.reason = t));
 															},
 														)),
 												e.status)
@@ -330,7 +370,9 @@
 							);
 						throw Error(
 							'Objects are not valid as a React child (found: ' +
-								('[object Object]' === (n = String(t)) ? 'object with keys {' + Object.keys(t).join(', ') + '}' : n) +
+								('[object Object]' === (n = String(t))
+									? 'object with keys {' + Object.keys(t).join(', ') + '}'
+									: n) +
 								'). If you meant to render a collection of children, use an array instead.',
 						);
 					}
@@ -346,10 +388,12 @@
 				var t = e._result;
 				((t = t()).then(
 					function (t) {
-						(0 === e._status || -1 === e._status) && ((e._status = 1), (e._result = t));
+						(0 === e._status || -1 === e._status) &&
+							((e._status = 1), (e._result = t));
 					},
 					function (t) {
-						(0 === e._status || -1 === e._status) && ((e._status = 2), (e._result = t));
+						(0 === e._status || -1 === e._status) &&
+							((e._status = 2), (e._result = t));
 					},
 				),
 					-1 === e._status && ((e._status = 0), (e._result = t)));
@@ -361,16 +405,26 @@
 			'function' == typeof reportError
 				? reportError
 				: function (e) {
-						if ('object' == typeof window && 'function' == typeof window.ErrorEvent) {
+						if (
+							'object' == typeof window &&
+							'function' == typeof window.ErrorEvent
+						) {
 							var t = new window.ErrorEvent('error', {
 								bubbles: !0,
 								cancelable: !0,
 								message:
-									'object' == typeof e && null !== e && 'string' == typeof e.message ? String(e.message) : String(e),
+									'object' == typeof e &&
+									null !== e &&
+									'string' == typeof e.message
+										? String(e.message)
+										: String(e),
 								error: e,
 							});
 							if (!window.dispatchEvent(t)) return;
-						} else if ('object' == typeof r.default && 'function' == typeof r.default.emit)
+						} else if (
+							'object' == typeof r.default &&
+							'function' == typeof r.default.emit
+						)
 							return void r.default.emit('uncaughtException', e);
 						console.error(e);
 					};
@@ -403,7 +457,10 @@
 					);
 				},
 				only: function (e) {
-					if (!k(e)) throw Error('React.Children.only expected to receive a single React element child.');
+					if (!k(e))
+						throw Error(
+							'React.Children.only expected to receive a single React element child.',
+						);
 					return e;
 				},
 			}),
@@ -429,7 +486,10 @@
 				return null;
 			}),
 			(n.cloneElement = function (e, t, n) {
-				if (null == e) throw Error('The argument must be a React element, but you passed ' + e + '.');
+				if (null == e)
+					throw Error(
+						'The argument must be a React element, but you passed ' + e + '.',
+					);
 				var r = v({}, e.props),
 					o = e.key;
 				if (null != t)
@@ -468,14 +528,19 @@
 					u = null;
 				if (null != t)
 					for (r in (void 0 !== t.key && (u = '' + t.key), t))
-						P.call(t, r) && 'key' !== r && '__self' !== r && '__source' !== r && (o[r] = t[r]);
+						P.call(t, r) &&
+							'key' !== r &&
+							'__self' !== r &&
+							'__source' !== r &&
+							(o[r] = t[r]);
 				var i = arguments.length - 2;
 				if (1 === i) o.children = n;
 				else if (1 < i) {
 					for (var a = Array(i), s = 0; s < i; s++) a[s] = arguments[s + 2];
 					o.children = a;
 				}
-				if (e && e.defaultProps) for (r in (i = e.defaultProps)) void 0 === o[r] && (o[r] = i[r]);
+				if (e && e.defaultProps)
+					for (r in (i = e.defaultProps)) void 0 === o[r] && (o[r] = i[r]);
 				return T(e, u, o);
 			}),
 			(n.createRef = function () {
@@ -498,7 +563,11 @@
 				try {
 					var r = e(),
 						o = x.S;
-					(null !== o && o(n, r), 'object' == typeof r && null !== r && 'function' == typeof r.then && r.then(O, A));
+					(null !== o && o(n, r),
+						'object' == typeof r &&
+							null !== r &&
+							'function' == typeof r.then &&
+							r.then(O, A));
 				} catch (e) {
 					A(e);
 				} finally {
@@ -614,7 +683,8 @@
 		}
 		n._ = function (e, t) {
 			if (!t && e && e.__esModule) return e;
-			if (null === e || ('object' != typeof e && 'function' != typeof e)) return { default: e };
+			if (null === e || ('object' != typeof e && 'function' != typeof e))
+				return { default: e };
 			var n = r(t);
 			if (n && n.has(e)) return n.get(e);
 			var o = { __proto__: null },
@@ -622,7 +692,9 @@
 			for (var i in e)
 				if ('default' !== i && Object.prototype.hasOwnProperty.call(e, i)) {
 					var a = u ? Object.getOwnPropertyDescriptor(e, i) : null;
-					a && (a.get || a.set) ? Object.defineProperty(o, i, a) : (o[i] = e[i]);
+					a && (a.get || a.set)
+						? Object.defineProperty(o, i, a)
+						: (o[i] = e[i]);
 				}
 			return ((o.default = e), n && n.set(e, o), o);
 		};
@@ -645,13 +717,16 @@
 			let { headManager: t, reduceComponentsToState: n } = e;
 			function a() {
 				if (t && t.mountedInstances) {
-					let o = r.Children.toArray(Array.from(t.mountedInstances).filter(Boolean));
+					let o = r.Children.toArray(
+						Array.from(t.mountedInstances).filter(Boolean),
+					);
 					t.updateHead(n(o, e));
 				}
 			}
 			if (o) {
 				var s;
-				(null == t || null == (s = t.mountedInstances) || s.add(e.children), a());
+				(null == t || null == (s = t.mountedInstances) || s.add(e.children),
+					a());
 			}
 			return (
 				u(() => {
@@ -660,7 +735,9 @@
 						null == t || null == (n = t.mountedInstances) || n.add(e.children),
 						() => {
 							var n;
-							null == t || null == (n = t.mountedInstances) || n.delete(e.children);
+							null == t ||
+								null == (n = t.mountedInstances) ||
+								n.delete(e.children);
 						}
 					);
 				}),
@@ -674,9 +751,13 @@
 				),
 				i(
 					() => (
-						t && t._pendingUpdate && (t._pendingUpdate(), (t._pendingUpdate = null)),
+						t &&
+							t._pendingUpdate &&
+							(t._pendingUpdate(), (t._pendingUpdate = null)),
 						() => {
-							t && t._pendingUpdate && (t._pendingUpdate(), (t._pendingUpdate = null));
+							t &&
+								t._pendingUpdate &&
+								(t._pendingUpdate(), (t._pendingUpdate = null));
 						}
 					),
 				),
@@ -700,7 +781,11 @@
 	(e, t, n) => {
 		'use strict';
 		function r(e) {
-			let { ampFirst: t = !1, hybrid: n = !1, hasQuery: r = !1 } = void 0 === e ? {} : e;
+			let {
+				ampFirst: t = !1,
+				hybrid: n = !1,
+				hasQuery: r = !1,
+			} = void 0 === e ? {} : e;
 			return t || (n && r);
 		}
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
@@ -716,7 +801,8 @@
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
 			!(function (e, t) {
-				for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+				for (var n in t)
+					Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
 			})(n, {
 				default: function () {
 					return m;
@@ -736,7 +822,17 @@
 		function f(e) {
 			void 0 === e && (e = !1);
 			let t = [(0, u.jsx)('meta', { charSet: 'utf-8' }, 'charset')];
-			return (e || t.push((0, u.jsx)('meta', { name: 'viewport', content: 'width=device-width' }, 'viewport')), t);
+			return (
+				e ||
+					t.push(
+						(0, u.jsx)(
+							'meta',
+							{ name: 'viewport', content: 'width=device-width' },
+							'viewport',
+						),
+					),
+				t
+			);
 		}
 		function d(e, t) {
 			return 'string' == typeof t || 'number' == typeof t
@@ -744,7 +840,10 @@
 				: t.type === i.default.Fragment
 					? e.concat(
 							i.default.Children.toArray(t.props.children).reduce(
-								(e, t) => ('string' == typeof t || 'number' == typeof t ? e : e.concat(t)),
+								(e, t) =>
+									'string' == typeof t || 'number' == typeof t
+										? e
+										: e.concat(t),
 								[],
 							),
 						)
@@ -785,7 +884,9 @@
 											else {
 												let e = o.props[t],
 													n = r[t] || new Set();
-												('name' !== t || !i) && n.has(e) ? (u = !1) : (n.add(e), (r[t] = n));
+												('name' !== t || !i) && n.has(e)
+													? (u = !1)
+													: (n.add(e), (r[t] = n));
 											}
 									}
 							}
@@ -810,7 +911,8 @@
 				children: t,
 			});
 		};
-		('function' == typeof n.default || ('object' == typeof n.default && null !== n.default)) &&
+		('function' == typeof n.default ||
+			('object' == typeof n.default && null !== n.default)) &&
 			void 0 === n.default.__esModule &&
 			(Object.defineProperty(n.default, '__esModule', { value: !0 }),
 			Object.assign(n.default, n),
@@ -821,7 +923,8 @@
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
 			!(function (e, t) {
-				for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+				for (var n in t)
+					Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
 			})(n, {
 				DecodeError: function () {
 					return m;
@@ -880,7 +983,8 @@
 			let t,
 				n = !1;
 			return function () {
-				for (var r = arguments.length, o = Array(r), u = 0; u < r; u++) o[u] = arguments[u];
+				for (var r = arguments.length, o = Array(r), u = 0; u < r; u++)
+					o[u] = arguments[u];
 				return (n || ((n = !0), (t = e(...o))), t);
 			};
 		}
@@ -903,23 +1007,39 @@
 		}
 		function f(e) {
 			let t = e.split('?');
-			return t[0].replace(/\\/g, '/').replace(/\/\/+/g, '/') + (t[1] ? '?' + t.slice(1).join('?') : '');
+			return (
+				t[0].replace(/\\/g, '/').replace(/\/\/+/g, '/') +
+				(t[1] ? '?' + t.slice(1).join('?') : '')
+			);
 		}
 		async function d(e, t) {
 			let n = t.res || (t.ctx && t.ctx.res);
-			if (!e.getInitialProps) return t.ctx && t.Component ? { pageProps: await d(t.Component, t.ctx) } : {};
+			if (!e.getInitialProps)
+				return t.ctx && t.Component
+					? { pageProps: await d(t.Component, t.ctx) }
+					: {};
 			let r = await e.getInitialProps(t);
 			if (n && l(n)) return r;
 			if (!r)
 				throw Object.defineProperty(
-					Error('"' + c(e) + '.getInitialProps()" should resolve to an object. But found "' + r + '" instead.'),
+					Error(
+						'"' +
+							c(e) +
+							'.getInitialProps()" should resolve to an object. But found "' +
+							r +
+							'" instead.',
+					),
 					'__NEXT_ERROR_CODE',
 					{ value: 'E394', enumerable: !1, configurable: !0 },
 				);
 			return r;
 		}
 		let p = 'undefined' != typeof performance,
-			y = p && ['mark', 'measure', 'getEntriesByName'].every((e) => 'function' == typeof performance[e]);
+			y =
+				p &&
+				['mark', 'measure', 'getEntriesByName'].every(
+					(e) => 'function' == typeof performance[e],
+				);
 		class m extends Error {}
 		class h extends Error {}
 		class _ extends Error {
@@ -932,12 +1052,16 @@
 		}
 		class v extends Error {
 			constructor(e, t) {
-				(super(), (this.message = 'Failed to load static file for page: ' + e + ' ' + t));
+				(super(),
+					(this.message =
+						'Failed to load static file for page: ' + e + ' ' + t));
 			}
 		}
 		class b extends Error {
 			constructor() {
-				(super(), (this.code = 'ENOENT'), (this.message = 'Cannot find the middleware module'));
+				(super(),
+					(this.code = 'ENOENT'),
+					(this.message = 'Cannot find the middleware module'));
 			}
 		}
 		function g(e) {
@@ -946,7 +1070,10 @@
 	},
 	7914,
 	(e) => {
-		e.v({ className: 'geist_67d76b20-module__yOMf8W__className', variable: 'geist_67d76b20-module__yOMf8W__variable' });
+		e.v({
+			className: 'geist_67d76b20-module__yOMf8W__className',
+			variable: 'geist_67d76b20-module__yOMf8W__variable',
+		});
 	},
 	4510,
 	(e) => {
@@ -965,12 +1092,18 @@
 		e.s(['default', () => a], 6027);
 		var t = e.i(4601),
 			n = e.i(7914);
-		let r = { className: n.default.className, style: { fontFamily: "'Geist', 'Geist Fallback'", fontStyle: 'normal' } };
+		let r = {
+			className: n.default.className,
+			style: { fontFamily: "'Geist', 'Geist Fallback'", fontStyle: 'normal' },
+		};
 		null != n.default.variable && (r.variable = n.default.variable);
 		var o = e.i(4510);
 		let u = {
 			className: o.default.className,
-			style: { fontFamily: "'Geist Mono', 'Geist Mono Fallback'", fontStyle: 'normal' },
+			style: {
+				fontFamily: "'Geist Mono', 'Geist Mono Fallback'",
+				fontStyle: 'normal',
+			},
 		};
 		null != o.default.variable && (u.variable = o.default.variable);
 		var i = e.i(8839);
@@ -978,7 +1111,9 @@
 			let { Component: n, pageProps: o } = e;
 			return (0, t.jsxs)(t.Fragment, {
 				children: [
-					(0, t.jsx)(i.default, { children: (0, t.jsx)('title', { children: 'today.do' }) }),
+					(0, t.jsx)(i.default, {
+						children: (0, t.jsx)('title', { children: 'today.do' }),
+					}),
 					(0, t.jsx)('div', {
 						className: ''.concat(r.className, ' ').concat(u.className),
 						children: (0, t.jsx)(n, { ...o }),
@@ -998,10 +1133,18 @@
 	},
 	5923,
 	(e) => {
-		e.v((t) => Promise.all(['static/chunks/e6153f92686bf758.js'].map((t) => e.l(t))).then(() => t(3933)));
+		e.v((t) =>
+			Promise.all(
+				['static/chunks/e6153f92686bf758.js'].map((t) => e.l(t)),
+			).then(() => t(3933)),
+		);
 	},
 	6376,
 	(e) => {
-		e.v((t) => Promise.all(['static/chunks/db995d3b81bcf324.js'].map((t) => e.l(t))).then(() => t(9979)));
+		e.v((t) =>
+			Promise.all(
+				['static/chunks/db995d3b81bcf324.js'].map((t) => e.l(t)),
+			).then(() => t(9979)),
+		);
 	},
 ]);

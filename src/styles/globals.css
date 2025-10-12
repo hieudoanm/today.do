@@ -13,13 +13,17 @@
 	color-scheme: dark; /* Browser UI like scrollbars/tooltips will be dark */
 
 	/* === Base Backgrounds === */
-	--color-base-100: oklch(20.5% 0 0 / 0.6); /* Deep background (transparent dark) */
+	--color-base-100: oklch(
+		20.5% 0 0 / 0.6
+	); /* Deep background (transparent dark) */
 	--color-base-200: oklch(26.9% 0 0 / 0.6); /* Slightly lighter surface */
 	--color-base-300: oklch(37.1% 0 0 / 0.6); /* Cards, floating layers */
 	--color-base-content: oklch(97% 0 0); /* Text on dark background */
 
 	/* === Primary Colors === */
-	--color-primary: oklch(20.5% 0 0 / 0.7); /* Primary interactive color (dark gray glass) */
+	--color-primary: oklch(
+		20.5% 0 0 / 0.7
+	); /* Primary interactive color (dark gray glass) */
 	--color-primary-content: oklch(97% 0 0); /* Text/icon on primary */
 
 	/* === Secondary Colors === */

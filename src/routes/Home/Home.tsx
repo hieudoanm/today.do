@@ -59,7 +59,9 @@ export const Home: FC = () => {
 				{/* Task List */}
 				<ul className="space-y-2">
 					{tasks.map((todo) => (
-						<li key={todo.id} className="bg-base-300 flex items-center justify-between rounded-lg p-3">
+						<li
+							key={todo.id}
+							className="bg-base-300 flex items-center justify-between rounded-lg p-3">
 							<div className="flex items-center gap-2">
 								<input
 									type="checkbox"
@@ -67,16 +69,23 @@ export const Home: FC = () => {
 									checked={todo.completed}
 									onChange={() => handleToggle(todo)}
 								/>
-								<span className={`text-lg ${todo.completed ? 'text-gray-500 line-through' : ''}`}>{todo.text}</span>
+								<span
+									className={`text-lg ${todo.completed ? 'text-gray-500 line-through' : ''}`}>
+									{todo.text}
+								</span>
 							</div>
-							<button className="btn btn-sm btn-error rounded-full" onClick={() => handleDelete(todo.id)}>
+							<button
+								className="btn btn-sm btn-error rounded-full"
+								onClick={() => handleDelete(todo.id)}>
 								<PiX />
 							</button>
 						</li>
 					))}
 				</ul>
 
-				{tasks.length === 0 && <p className="mt-4 text-center text-gray-500">No tasks yet!</p>}
+				{tasks.length === 0 && (
+					<p className="mt-4 text-center text-gray-500">No tasks yet!</p>
+				)}
 			</div>
 		</div>
 	);

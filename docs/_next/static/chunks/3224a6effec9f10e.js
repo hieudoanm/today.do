@@ -6,7 +6,13 @@
 		e.s(['default', () => f], 7856);
 		var t = e.i(4601),
 			r = e.i(6960),
-			n = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
+			n = {
+				color: void 0,
+				size: void 0,
+				className: void 0,
+				style: void 0,
+				attr: void 0,
+			},
 			a = r.default.createContext && r.default.createContext(n),
 			o = ['attr', 'size', 'title'];
 		function l() {
@@ -40,19 +46,30 @@
 										if (void 0 !== r) {
 											var n = r.call(e, t || 'default');
 											if ('object' != typeof n) return n;
-											throw TypeError('@@toPrimitive must return a primitive value.');
+											throw TypeError(
+												'@@toPrimitive must return a primitive value.',
+											);
 										}
 										return ('string' === t ? String : Number)(e);
 									})(e, 'string');
 									return 'symbol' == typeof t ? t : t + '';
 								})(a)) in n
-									? Object.defineProperty(n, a, { value: o, enumerable: !0, configurable: !0, writable: !0 })
+									? Object.defineProperty(n, a, {
+											value: o,
+											enumerable: !0,
+											configurable: !0,
+											writable: !0,
+										})
 									: (n[a] = o));
 						})
 					: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
 						: s(Object(r)).forEach(function (t) {
-								Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
+								Object.defineProperty(
+									e,
+									t,
+									Object.getOwnPropertyDescriptor(r, t),
+								);
 							});
 			}
 			return e;
@@ -63,7 +80,16 @@
 					d,
 					l({ attr: i({}, e.attr) }, t),
 					(function e(t) {
-						return t && t.map((t, n) => r.default.createElement(t.tag, i({ key: n }, t.attr), e(t.child)));
+						return (
+							t &&
+							t.map((t, n) =>
+								r.default.createElement(
+									t.tag,
+									i({ key: n }, t.attr),
+									e(t.child),
+								),
+							)
+						);
 					})(e.child),
 				);
 		}
@@ -88,7 +114,10 @@
 						if (Object.getOwnPropertySymbols) {
 							var o = Object.getOwnPropertySymbols(e);
 							for (n = 0; n < o.length; n++)
-								((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
+								((r = o[n]),
+									!(t.indexOf(r) >= 0) &&
+										Object.prototype.propertyIsEnumerable.call(e, r) &&
+										(a[r] = e[r]));
 						}
 						return a;
 					})(e, o),
@@ -98,19 +127,31 @@
 					e.className && (n = (n ? n + ' ' : '') + e.className),
 					r.default.createElement(
 						'svg',
-						l({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, a, d, {
-							className: n,
-							style: i(i({ color: e.color || t.color }, t.style), e.style),
-							height: u,
-							width: u,
-							xmlns: 'http://www.w3.org/2000/svg',
-						}),
+						l(
+							{
+								stroke: 'currentColor',
+								fill: 'currentColor',
+								strokeWidth: '0',
+							},
+							t.attr,
+							a,
+							d,
+							{
+								className: n,
+								style: i(i({ color: e.color || t.color }, t.style), e.style),
+								height: u,
+								width: u,
+								xmlns: 'http://www.w3.org/2000/svg',
+							},
+						),
 						c && r.default.createElement('title', null, c),
 						e.children,
 					)
 				);
 			};
-			return void 0 !== a ? r.default.createElement(a.Consumer, null, (e) => t(e)) : t(n);
+			return void 0 !== a
+				? r.default.createElement(a.Consumer, null, (e) => t(e))
+				: t(n);
 		}
 		function u(e) {
 			return c({
@@ -173,7 +214,8 @@
 								? e.completed
 									? 1
 									: -1
-								: new Date(t.updatedAt).getTime() - new Date(e.updatedAt).getTime();
+								: new Date(t.updatedAt).getTime() -
+									new Date(e.updatedAt).getTime();
 						return {
 							database: a,
 							list: () =>
@@ -186,7 +228,12 @@
 									}),
 										(r.onerror = () => {
 											var e;
-											return t(Error((null == (e = r.error) ? void 0 : e.message) || 'Failed to fetch tasks'));
+											return t(
+												Error(
+													(null == (e = r.error) ? void 0 : e.message) ||
+														'Failed to fetch tasks',
+												),
+											);
 										}));
 								}),
 							add: (e) =>
@@ -194,11 +241,18 @@
 									if (!a) return;
 									let o = new Date().toISOString(),
 										l = a.transaction(n, 'readwrite');
-									(l.objectStore(n).add({ text: e, completed: !1, updatedAt: o }),
+									(l
+										.objectStore(n)
+										.add({ text: e, completed: !1, updatedAt: o }),
 										(l.oncomplete = () => t()),
 										(l.onerror = () => {
 											var e;
-											return r(Error((null == (e = l.error) ? void 0 : e.message) || 'Failed to add task'));
+											return r(
+												Error(
+													(null == (e = l.error) ? void 0 : e.message) ||
+														'Failed to add task',
+												),
+											);
 										}));
 								}),
 							update: (e) =>
@@ -210,7 +264,12 @@
 										(l.oncomplete = () => t()),
 										(l.onerror = () => {
 											var e;
-											return r(Error((null == (e = l.error) ? void 0 : e.message) || 'Failed to update task'));
+											return r(
+												Error(
+													(null == (e = l.error) ? void 0 : e.message) ||
+														'Failed to update task',
+												),
+											);
 										}));
 								}),
 							remove: (e) =>
@@ -221,7 +280,12 @@
 										(o.oncomplete = () => t()),
 										(o.onerror = () => {
 											var e;
-											return r(Error((null == (e = o.error) ? void 0 : e.message) || 'Failed to delete task'));
+											return r(
+												Error(
+													(null == (e = o.error) ? void 0 : e.message) ||
+														'Failed to delete task',
+												),
+											);
 										}));
 								}),
 						};
@@ -241,11 +305,16 @@
 						(await l(e), i(await n()));
 					};
 				return (0, t.jsx)('div', {
-					className: 'bg-base-200 flex h-screen flex-col items-center py-0 md:min-h-screen md:py-10',
+					className:
+						'bg-base-200 flex h-screen flex-col items-center py-0 md:min-h-screen md:py-10',
 					children: (0, t.jsxs)('div', {
-						className: 'bg-base-100 h-screen w-full max-w-md rounded-none p-6 shadow-lg md:h-auto md:rounded-2xl',
+						className:
+							'bg-base-100 h-screen w-full max-w-md rounded-none p-6 shadow-lg md:h-auto md:rounded-2xl',
 						children: [
-							(0, t.jsx)('h1', { className: 'mb-4 text-center text-2xl font-bold', children: 'Tasks' }),
+							(0, t.jsx)('h1', {
+								className: 'mb-4 text-center text-2xl font-bold',
+								children: 'Tasks',
+							}),
 							(0, t.jsxs)('div', {
 								className: 'mb-4 flex gap-2',
 								children: [
@@ -270,7 +339,8 @@
 									(0, t.jsxs)(
 										'li',
 										{
-											className: 'bg-base-300 flex items-center justify-between rounded-lg p-3',
+											className:
+												'bg-base-300 flex items-center justify-between rounded-lg p-3',
 											children: [
 												(0, t.jsxs)('div', {
 													className: 'flex items-center gap-2',
@@ -282,7 +352,9 @@
 															onChange: () => f(e),
 														}),
 														(0, t.jsx)('span', {
-															className: 'text-lg '.concat(e.completed ? 'text-gray-500 line-through' : ''),
+															className: 'text-lg '.concat(
+																e.completed ? 'text-gray-500 line-through' : '',
+															),
 															children: e.text,
 														}),
 													],
@@ -299,7 +371,10 @@
 								),
 							}),
 							0 === s.length &&
-								(0, t.jsx)('p', { className: 'mt-4 text-center text-gray-500', children: 'No tasks yet!' }),
+								(0, t.jsx)('p', {
+									className: 'mt-4 text-center text-gray-500',
+									children: 'No tasks yet!',
+								}),
 						],
 					}),
 				});

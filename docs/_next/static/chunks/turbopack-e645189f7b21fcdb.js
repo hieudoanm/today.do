@@ -44,12 +44,18 @@
 		}
 		((o.s = function (e, t) {
 			let r, n;
-			(null != t ? (n = (r = u(this.c, t)).exports) : ((r = this.m), (n = this.e)), (r.namespaceObject = n), c(n, e));
+			(null != t
+				? (n = (r = u(this.c, t)).exports)
+				: ((r = this.m), (n = this.e)),
+				(r.namespaceObject = n),
+				c(n, e));
 		}),
 			(o.j = function (e, t) {
 				var n, o;
 				let l, s, a;
-				null != t ? (s = (l = u(this.c, t)).exports) : ((l = this.m), (s = this.e));
+				null != t
+					? (s = (l = u(this.c, t)).exports)
+					: ((l = this.m), (s = this.e));
 				let c =
 					((n = l),
 					(o = s),
@@ -58,7 +64,8 @@
 						(n.exports = n.namespaceObject =
 							new Proxy(o, {
 								get(e, t) {
-									if (i.call(e, t) || 'default' === t || '__esModule' === t) return Reflect.get(e, t);
+									if (i.call(e, t) || 'default' === t || '__esModule' === t)
+										return Reflect.get(e, t);
 									for (let e of a) {
 										let r = Reflect.get(e, t);
 										if (void 0 !== r) return r;
@@ -66,7 +73,9 @@
 								},
 								ownKeys(e) {
 									let t = Reflect.ownKeys(e);
-									for (let e of a) for (let r of Reflect.ownKeys(e)) 'default' === r || t.includes(r) || t.push(r);
+									for (let e of a)
+										for (let r of Reflect.ownKeys(e))
+											'default' === r || t.includes(r) || t.push(r);
 									return t;
 								},
 							}))),
@@ -80,12 +89,18 @@
 				let r;
 				(r = null != t ? u(this.c, t) : this.m).exports = r.namespaceObject = e;
 			}));
-		let f = Object.getPrototypeOf ? (e) => Object.getPrototypeOf(e) : (e) => e.__proto__,
+		let f = Object.getPrototypeOf
+				? (e) => Object.getPrototypeOf(e)
+				: (e) => e.__proto__,
 			p = [null, f({}), f([]), f(f)];
 		function h(e, t, r) {
 			let n = [],
 				o = -1;
-			for (let t = e; ('object' == typeof t || 'function' == typeof t) && !p.includes(t); t = f(t))
+			for (
+				let t = e;
+				('object' == typeof t || 'function' == typeof t) && !p.includes(t);
+				t = f(t)
+			)
 				for (let r of Object.getOwnPropertyNames(t))
 					(n.push(
 						r,
@@ -94,7 +109,12 @@
 						})(e, r),
 					),
 						-1 === o && 'default' === r && (o = n.length - 1));
-			return ((r && o >= 0) || (o >= 0 ? (n[o] = () => e) : n.push('default', () => e)), c(t, n), t);
+			return (
+				(r && o >= 0) ||
+					(o >= 0 ? (n[o] = () => e) : n.push('default', () => e)),
+				c(t, n),
+				t
+			);
 		}
 		function d() {
 			let e, t;
@@ -155,7 +175,9 @@
 		function O(e) {
 			e &&
 				1 !== e.status &&
-				((e.status = 1), e.forEach((e) => e.queueCount--), e.forEach((e) => (e.queueCount-- ? e.queueCount++ : e())));
+				((e.status = 1),
+				e.forEach((e) => e.queueCount--),
+				e.forEach((e) => (e.queueCount-- ? e.queueCount++ : e())));
 		}
 		o.a = function (e, t) {
 			let r = this.m,
@@ -181,7 +203,12 @@
 						let t = e.map((e) => {
 								if (null !== e && 'object' == typeof e) {
 									if (m in e) return e;
-									if (null != e && 'object' == typeof e && 'then' in e && 'function' == typeof e.then) {
+									if (
+										null != e &&
+										'object' == typeof e &&
+										'then' in e &&
+										'function' == typeof e.then
+									) {
 										let t = Object.assign([], { status: 0 }),
 											r = { [b]: {}, [m]: (e) => e(t) };
 										return (
@@ -207,7 +234,9 @@
 							{ promise: i, resolve: l } = d(),
 							s = Object.assign(() => l(r), { queueCount: 0 });
 						function u(e) {
-							e !== n && !o.has(e) && (o.add(e), e && 0 === e.status && (s.queueCount++, e.push(s)));
+							e !== n &&
+								!o.has(e) &&
+								(o.add(e), e && 0 === e.status && (s.queueCount++, e.push(s)));
 						}
 						return (t.map((e) => e[m](u)), s.queueCount ? i : r());
 					},
@@ -226,7 +255,11 @@
 			(r.origin = r.protocol = ''),
 			(r.toString = r.toJSON = (...t) => e),
 			r))
-				Object.defineProperty(this, t, { enumerable: !0, configurable: !0, value: r[t] });
+				Object.defineProperty(this, t, {
+					enumerable: !0,
+					configurable: !0,
+					value: r[t],
+				});
 		};
 		function w(e, t) {
 			throw Error(`Invariant: ${t(e)}`);
@@ -239,7 +272,12 @@
 			(o.g = globalThis));
 		let R = n.prototype;
 		var j = (function (e) {
-			return ((e[(e.Runtime = 0)] = 'Runtime'), (e[(e.Parent = 1)] = 'Parent'), (e[(e.Update = 2)] = 'Update'), e);
+			return (
+				(e[(e.Runtime = 0)] = 'Runtime'),
+				(e[(e.Parent = 1)] = 'Parent'),
+				(e[(e.Update = 2)] = 'Update'),
+				e
+			);
 		})(j || {});
 		let C = new Map();
 		o.M = C;
@@ -293,7 +331,10 @@
 						default:
 							w(t, (e) => `Unknown source type: ${e}`);
 					}
-					throw Error(`Failed to load chunk ${n} ${o}${e ? `: ${e}` : ''}`, e ? { cause: e } : void 0);
+					throw Error(
+						`Failed to load chunk ${n} ${o}${e ? `: ${e}` : ''}`,
+						e ? { cause: e } : void 0,
+					);
 				})),
 					P.set(o, i));
 			}
@@ -378,7 +419,12 @@ importScripts(...self.TURBOPACK_NEXT_CHUNK_URLS.map(c => self.TURBOPACK_WORKER_L
 			} catch (e) {
 				throw ((i.error = e), e);
 			}
-			return (i.namespaceObject && i.exports !== i.namespaceObject && h(i.exports, i.namespaceObject), i);
+			return (
+				i.namespaceObject &&
+					i.exports !== i.namespaceObject &&
+					h(i.exports, i.namespaceObject),
+				i
+			);
 		}
 		function N(r) {
 			let n,
@@ -402,10 +448,19 @@ importScripts(...self.TURBOPACK_NEXT_CHUNK_URLS.map(c => self.TURBOPACK_WORKER_L
 								let t = e[o],
 									n = o + 1;
 								for (; n < e.length && 'function' != typeof e[n]; ) n++;
-								if (n === e.length) throw Error('malformed chunk format, expected a factory function');
+								if (n === e.length)
+									throw Error(
+										'malformed chunk format, expected a factory function',
+									);
 								if (!r.has(t)) {
 									let i = e[n];
-									for (Object.defineProperty(i, 'name', { value: '__TURBOPACK__module__evaluation__' }); o < n; o++)
+									for (
+										Object.defineProperty(i, 'name', {
+											value: '__TURBOPACK__module__evaluation__',
+										});
+										o < n;
+										o++
+									)
 										((t = e[o]), r.set(t, i));
 								}
 								o = n + 1;
@@ -438,8 +493,12 @@ importScripts(...self.TURBOPACK_NEXT_CHUNK_URLS.map(c => self.TURBOPACK_WORKER_L
 			e = {
 				async registerChunk(e, r) {
 					if ((t(T(e)).resolve(), null != r)) {
-						for (let e of r.otherChunks) t(T('string' == typeof e ? e : e.path));
-						if ((await Promise.all(r.otherChunks.map((t) => k(0, e, t))), r.runtimeModuleIds.length > 0))
+						for (let e of r.otherChunks)
+							t(T('string' == typeof e ? e : e.path));
+						if (
+							(await Promise.all(r.otherChunks.map((t) => k(0, e, t))),
+							r.runtimeModuleIds.length > 0)
+						)
 							for (let t of r.runtimeModuleIds)
 								!(function (e, t) {
 									let r = K[t];
@@ -455,12 +514,17 @@ importScripts(...self.TURBOPACK_NEXT_CHUNK_URLS.map(c => self.TURBOPACK_WORKER_L
 					(function (e, r) {
 						let n = t(r);
 						if (n.loadingStarted) return n.promise;
-						if (e === j.Runtime) return ((n.loadingStarted = !0), E(r) && n.resolve(), n.promise);
+						if (e === j.Runtime)
+							return ((n.loadingStarted = !0), E(r) && n.resolve(), n.promise);
 						if ('function' == typeof importScripts)
 							if (E(r));
 							else if (A.test(r))
-								(self.TURBOPACK_NEXT_CHUNK_URLS.push(r), importScripts(TURBOPACK_WORKER_LOCATION + r));
-							else throw Error(`can't infer type of chunk from URL ${r} in worker`);
+								(self.TURBOPACK_NEXT_CHUNK_URLS.push(r),
+									importScripts(TURBOPACK_WORKER_LOCATION + r));
+							else
+								throw Error(
+									`can't infer type of chunk from URL ${r} in worker`,
+								);
 						else {
 							let e = decodeURI(r);
 							if (E(r))
