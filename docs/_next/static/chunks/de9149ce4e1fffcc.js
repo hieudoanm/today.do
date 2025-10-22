@@ -1,295 +1,282 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	2927,
+	3790,
 	(e, t, r) => {
 		'use strict';
-		(Object.defineProperty(r, '__esModule', { value: !0 }),
-			!(function (e, t) {
-				for (var r in t)
-					Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
-			})(r, {
-				DecodeError: function () {
-					return h;
-				},
-				MiddlewareNotFoundError: function () {
-					return b;
-				},
-				MissingStaticPage: function () {
-					return _;
-				},
-				NormalizeError: function () {
-					return m;
-				},
-				PageNotFoundError: function () {
-					return g;
-				},
-				SP: function () {
-					return p;
-				},
-				ST: function () {
-					return y;
-				},
-				WEB_VITALS: function () {
-					return n;
-				},
-				execOnce: function () {
-					return o;
-				},
-				getDisplayName: function () {
-					return c;
-				},
-				getLocationOrigin: function () {
-					return s;
-				},
-				getURL: function () {
-					return a;
-				},
-				isAbsoluteUrl: function () {
-					return i;
-				},
-				isResSent: function () {
-					return l;
-				},
-				loadGetInitialProps: function () {
-					return d;
-				},
-				normalizeRepeatedSlashes: function () {
-					return f;
-				},
-				stringifyError: function () {
-					return v;
-				},
-			}));
-		let n = ['CLS', 'FCP', 'FID', 'INP', 'LCP', 'TTFB'];
-		function o(e) {
+		Object.defineProperty(r, '__esModule', { value: !0 });
+		var n = {
+			DecodeError: function () {
+				return g;
+			},
+			MiddlewareNotFoundError: function () {
+				return w;
+			},
+			MissingStaticPage: function () {
+				return v;
+			},
+			NormalizeError: function () {
+				return _;
+			},
+			PageNotFoundError: function () {
+				return b;
+			},
+			SP: function () {
+				return h;
+			},
+			ST: function () {
+				return m;
+			},
+			WEB_VITALS: function () {
+				return u;
+			},
+			execOnce: function () {
+				return i;
+			},
+			getDisplayName: function () {
+				return f;
+			},
+			getLocationOrigin: function () {
+				return c;
+			},
+			getURL: function () {
+				return l;
+			},
+			isAbsoluteUrl: function () {
+				return a;
+			},
+			isResSent: function () {
+				return d;
+			},
+			loadGetInitialProps: function () {
+				return y;
+			},
+			normalizeRepeatedSlashes: function () {
+				return p;
+			},
+			stringifyError: function () {
+				return E;
+			},
+		};
+		for (var o in n) Object.defineProperty(r, o, { enumerable: !0, get: n[o] });
+		let u = ['CLS', 'FCP', 'FID', 'INP', 'LCP', 'TTFB'];
+		function i(e) {
 			let t,
 				r = !1;
-			return function () {
-				for (var n = arguments.length, o = Array(n), u = 0; u < n; u++)
-					o[u] = arguments[u];
-				return (r || ((r = !0), (t = e(...o))), t);
-			};
+			return (...n) => (r || ((r = !0), (t = e(...n))), t);
 		}
-		let u = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/,
-			i = (e) => u.test(e);
-		function s() {
+		let s = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/,
+			a = (e) => s.test(e);
+		function c() {
 			let { protocol: e, hostname: t, port: r } = window.location;
-			return e + '//' + t + (r ? ':' + r : '');
+			return `${e}//${t}${r ? ':' + r : ''}`;
 		}
-		function a() {
+		function l() {
 			let { href: e } = window.location,
-				t = s();
+				t = c();
 			return e.substring(t.length);
 		}
-		function c(e) {
+		function f(e) {
 			return 'string' == typeof e ? e : e.displayName || e.name || 'Unknown';
 		}
-		function l(e) {
+		function d(e) {
 			return e.finished || e.headersSent;
 		}
-		function f(e) {
+		function p(e) {
 			let t = e.split('?');
 			return (
 				t[0].replace(/\\/g, '/').replace(/\/\/+/g, '/') +
-				(t[1] ? '?' + t.slice(1).join('?') : '')
+				(t[1] ? `?${t.slice(1).join('?')}` : '')
 			);
 		}
-		async function d(e, t) {
+		async function y(e, t) {
 			let r = t.res || (t.ctx && t.ctx.res);
 			if (!e.getInitialProps)
 				return t.ctx && t.Component
-					? { pageProps: await d(t.Component, t.ctx) }
+					? { pageProps: await y(t.Component, t.ctx) }
 					: {};
 			let n = await e.getInitialProps(t);
-			if (r && l(r)) return n;
+			if (r && d(r)) return n;
 			if (!n)
 				throw Object.defineProperty(
 					Error(
-						'"' +
-							c(e) +
-							'.getInitialProps()" should resolve to an object. But found "' +
-							n +
-							'" instead.',
+						`"${f(e)}.getInitialProps()" should resolve to an object. But found "${n}" instead.`,
 					),
 					'__NEXT_ERROR_CODE',
 					{ value: 'E394', enumerable: !1, configurable: !0 },
 				);
 			return n;
 		}
-		let p = 'undefined' != typeof performance,
-			y =
-				p &&
+		let h = 'undefined' != typeof performance,
+			m =
+				h &&
 				['mark', 'measure', 'getEntriesByName'].every(
 					(e) => 'function' == typeof performance[e],
 				);
-		class h extends Error {}
-		class m extends Error {}
-		class g extends Error {
+		class g extends Error {}
+		class _ extends Error {}
+		class b extends Error {
 			constructor(e) {
 				(super(),
 					(this.code = 'ENOENT'),
 					(this.name = 'PageNotFoundError'),
-					(this.message = 'Cannot find module for page: ' + e));
+					(this.message = `Cannot find module for page: ${e}`));
 			}
 		}
-		class _ extends Error {
+		class v extends Error {
 			constructor(e, t) {
 				(super(),
-					(this.message =
-						'Failed to load static file for page: ' + e + ' ' + t));
+					(this.message = `Failed to load static file for page: ${e} ${t}`));
 			}
 		}
-		class b extends Error {
+		class w extends Error {
 			constructor() {
 				(super(),
 					(this.code = 'ENOENT'),
 					(this.message = 'Cannot find the middleware module'));
 			}
 		}
-		function v(e) {
+		function E(e) {
 			return JSON.stringify({ message: e.message, stack: e.stack });
 		}
 	},
-	1326,
+	5402,
 	(e, t, r) => {
-		!(function () {
-			var e = {
-					229: function (e) {
-						var t,
-							r,
-							n,
-							o = (e.exports = {});
-						function u() {
-							throw Error('setTimeout has not been defined');
-						}
-						function i() {
-							throw Error('clearTimeout has not been defined');
-						}
+		var n = {
+				229: function (e) {
+					var t,
+						r,
+						n,
+						o = (e.exports = {});
+					function u() {
+						throw Error('setTimeout has not been defined');
+					}
+					function i() {
+						throw Error('clearTimeout has not been defined');
+					}
+					try {
+						t = 'function' == typeof setTimeout ? setTimeout : u;
+					} catch (e) {
+						t = u;
+					}
+					try {
+						r = 'function' == typeof clearTimeout ? clearTimeout : i;
+					} catch (e) {
+						r = i;
+					}
+					function s(e) {
+						if (t === setTimeout) return setTimeout(e, 0);
+						if ((t === u || !t) && setTimeout)
+							return ((t = setTimeout), setTimeout(e, 0));
 						try {
-							t = 'function' == typeof setTimeout ? setTimeout : u;
-						} catch (e) {
-							t = u;
-						}
-						try {
-							r = 'function' == typeof clearTimeout ? clearTimeout : i;
-						} catch (e) {
-							r = i;
-						}
-						function s(e) {
-							if (t === setTimeout) return setTimeout(e, 0);
-							if ((t === u || !t) && setTimeout)
-								return ((t = setTimeout), setTimeout(e, 0));
+							return t(e, 0);
+						} catch (r) {
 							try {
-								return t(e, 0);
+								return t.call(null, e, 0);
 							} catch (r) {
-								try {
-									return t.call(null, e, 0);
-								} catch (r) {
-									return t.call(this, e, 0);
-								}
+								return t.call(this, e, 0);
 							}
 						}
-						var a = [],
-							c = !1,
-							l = -1;
-						function f() {
-							c &&
-								n &&
-								((c = !1),
-								n.length ? (a = n.concat(a)) : (l = -1),
-								a.length && d());
-						}
-						function d() {
-							if (!c) {
-								var e = s(f);
-								c = !0;
-								for (var t = a.length; t; ) {
-									for (n = a, a = []; ++l < t; ) n && n[l].run();
-									((l = -1), (t = a.length));
-								}
-								((n = null),
-									(c = !1),
-									(function (e) {
-										if (r === clearTimeout) return clearTimeout(e);
-										if ((r === i || !r) && clearTimeout)
-											return ((r = clearTimeout), clearTimeout(e));
+					}
+					var a = [],
+						c = !1,
+						l = -1;
+					function f() {
+						c &&
+							n &&
+							((c = !1),
+							n.length ? (a = n.concat(a)) : (l = -1),
+							a.length && d());
+					}
+					function d() {
+						if (!c) {
+							var e = s(f);
+							c = !0;
+							for (var t = a.length; t; ) {
+								for (n = a, a = []; ++l < t; ) n && n[l].run();
+								((l = -1), (t = a.length));
+							}
+							((n = null),
+								(c = !1),
+								(function (e) {
+									if (r === clearTimeout) return clearTimeout(e);
+									if ((r === i || !r) && clearTimeout)
+										return ((r = clearTimeout), clearTimeout(e));
+									try {
+										r(e);
+									} catch (t) {
 										try {
-											r(e);
+											return r.call(null, e);
 										} catch (t) {
-											try {
-												return r.call(null, e);
-											} catch (t) {
-												return r.call(this, e);
-											}
+											return r.call(this, e);
 										}
-									})(e));
-							}
+									}
+								})(e));
 						}
-						function p(e, t) {
-							((this.fun = e), (this.array = t));
-						}
-						function y() {}
-						((o.nextTick = function (e) {
-							var t = Array(arguments.length - 1);
-							if (arguments.length > 1)
-								for (var r = 1; r < arguments.length; r++)
-									t[r - 1] = arguments[r];
-							(a.push(new p(e, t)), 1 !== a.length || c || s(d));
+					}
+					function p(e, t) {
+						((this.fun = e), (this.array = t));
+					}
+					function y() {}
+					((o.nextTick = function (e) {
+						var t = Array(arguments.length - 1);
+						if (arguments.length > 1)
+							for (var r = 1; r < arguments.length; r++)
+								t[r - 1] = arguments[r];
+						(a.push(new p(e, t)), 1 !== a.length || c || s(d));
+					}),
+						(p.prototype.run = function () {
+							this.fun.apply(null, this.array);
 						}),
-							(p.prototype.run = function () {
-								this.fun.apply(null, this.array);
-							}),
-							(o.title = 'browser'),
-							(o.browser = !0),
-							(o.env = {}),
-							(o.argv = []),
-							(o.version = ''),
-							(o.versions = {}),
-							(o.on = y),
-							(o.addListener = y),
-							(o.once = y),
-							(o.off = y),
-							(o.removeListener = y),
-							(o.removeAllListeners = y),
-							(o.emit = y),
-							(o.prependListener = y),
-							(o.prependOnceListener = y),
-							(o.listeners = function (e) {
-								return [];
-							}),
-							(o.binding = function (e) {
-								throw Error('process.binding is not supported');
-							}),
-							(o.cwd = function () {
-								return '/';
-							}),
-							(o.chdir = function (e) {
-								throw Error('process.chdir is not supported');
-							}),
-							(o.umask = function () {
-								return 0;
-							}));
-					},
+						(o.title = 'browser'),
+						(o.browser = !0),
+						(o.env = {}),
+						(o.argv = []),
+						(o.version = ''),
+						(o.versions = {}),
+						(o.on = y),
+						(o.addListener = y),
+						(o.once = y),
+						(o.off = y),
+						(o.removeListener = y),
+						(o.removeAllListeners = y),
+						(o.emit = y),
+						(o.prependListener = y),
+						(o.prependOnceListener = y),
+						(o.listeners = function (e) {
+							return [];
+						}),
+						(o.binding = function (e) {
+							throw Error('process.binding is not supported');
+						}),
+						(o.cwd = function () {
+							return '/';
+						}),
+						(o.chdir = function (e) {
+							throw Error('process.chdir is not supported');
+						}),
+						(o.umask = function () {
+							return 0;
+						}));
 				},
-				r = {};
-			function n(t) {
-				var o = r[t];
-				if (void 0 !== o) return o.exports;
-				var u = (r[t] = { exports: {} }),
-					i = !0;
-				try {
-					(e[t](u, u.exports, n), (i = !1));
-				} finally {
-					i && delete r[t];
-				}
-				return u.exports;
+			},
+			o = {};
+		function u(e) {
+			var t = o[e];
+			if (void 0 !== t) return t.exports;
+			var r = (o[e] = { exports: {} }),
+				i = !0;
+			try {
+				(n[e](r, r.exports, u), (i = !1));
+			} finally {
+				i && delete o[e];
 			}
-			((n.ab =
-				'/ROOT/node_modules/.pnpm/next@15.5.4_@babel+core@7.28.4_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/compiled/process/'),
-				(t.exports = n(229)));
-		})();
+			return r.exports;
+		}
+		((u.ab =
+			'/ROOT/node_modules/.pnpm/next@16.0.0_@babel+core@7.28.4_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/compiled/process/'),
+			(t.exports = u(229)));
 	},
-	9828,
+	9779,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -297,7 +284,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(1326);
+				: e.r(5402);
 	},
 	6234,
 	(e, t, r) => {
@@ -330,7 +317,7 @@
 	4513,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(9828),
+		var n = e.i(9779),
 			o = Symbol.for('react.transitional.element'),
 			u = Symbol.for('react.portal'),
 			i = Symbol.for('react.fragment'),
@@ -361,7 +348,7 @@
 				(this.updater = r || g));
 		}
 		function w() {}
-		function x(e, t, r) {
+		function E(e, t, r) {
 			((this.props = e),
 				(this.context = t),
 				(this.refs = b),
@@ -379,9 +366,9 @@
 				this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
 			}),
 			(w.prototype = v.prototype));
-		var j = (x.prototype = new w());
-		((j.constructor = x), _(j, v.prototype), (j.isPureReactComponent = !0));
-		var E = Array.isArray;
+		var x = (E.prototype = new w());
+		((x.constructor = E), _(x, v.prototype), (x.isPureReactComponent = !0));
+		var j = Array.isArray;
 		function S() {}
 		var O = { H: null, A: null, T: null, S: null },
 			P = Object.prototype.hasOwnProperty;
@@ -444,7 +431,7 @@
 						return (
 							(s = s(t)),
 							(d = '' === i ? '.' + R(t, 0) : i),
-							E(s)
+							j(s)
 								? ((n = ''),
 									null != d && (n = d.replace(C, '$&/') + '/'),
 									e(s, r, n, '', function (e) {
@@ -465,7 +452,7 @@
 						);
 					d = 0;
 					var p = '' === i ? '.' : i + ':';
-					if (E(t))
+					if (j(t))
 						for (var h = 0; h < t.length; h++)
 							((f = p + R((i = t[h]), h)), (d += e(i, r, n, f, s)));
 					else if (
@@ -533,7 +520,7 @@
 				n
 			);
 		}
-		function A(e) {
+		function $(e) {
 			if (-1 === e._status) {
 				var t = e._result;
 				((t = t()).then(
@@ -551,7 +538,7 @@
 			if (1 === e._status) return e._result.default;
 			throw e._result;
 		}
-		var I =
+		var A =
 			'function' == typeof reportError
 				? reportError
 				: function (e) {
@@ -617,7 +604,7 @@
 			(r.Component = v),
 			(r.Fragment = i),
 			(r.Profiler = a),
-			(r.PureComponent = x),
+			(r.PureComponent = E),
 			(r.StrictMode = s),
 			(r.Suspense = d),
 			(r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = O),
@@ -701,7 +688,7 @@
 			}),
 			(r.isValidElement = k),
 			(r.lazy = function (e) {
-				return { $$typeof: y, _payload: { _status: -1, _result: e }, _init: A };
+				return { $$typeof: y, _payload: { _status: -1, _result: e }, _init: $ };
 			}),
 			(r.memo = function (e, t) {
 				return { $$typeof: p, type: e, compare: void 0 === t ? null : t };
@@ -717,9 +704,9 @@
 						'object' == typeof n &&
 							null !== n &&
 							'function' == typeof n.then &&
-							n.then(S, I));
+							n.then(S, A));
 				} catch (e) {
-					I(e);
+					A(e);
 				} finally {
 					(null !== t && null !== r.types && (t.types = r.types), (O.T = t));
 				}
@@ -796,7 +783,7 @@
 			return e && e.__esModule ? e : { default: e };
 		};
 	},
-	6535,
+	8065,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -808,7 +795,7 @@
 			}));
 		let n = e.r(2879)._(e.r(6960)).default.createContext({});
 	},
-	8443,
+	8114,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -849,7 +836,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	7037,
+	4366,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -867,30 +854,22 @@
 			let { headManager: t, reduceComponentsToState: r } = e;
 			function s() {
 				if (t && t.mountedInstances) {
-					let o = n.Children.toArray(
+					let e = n.Children.toArray(
 						Array.from(t.mountedInstances).filter(Boolean),
 					);
-					t.updateHead(r(o, e));
+					t.updateHead(r(e));
 				}
 			}
-			if (o) {
-				var a;
-				(null == t || null == (a = t.mountedInstances) || a.add(e.children),
-					s());
-			}
 			return (
-				u(() => {
-					var r;
-					return (
-						null == t || null == (r = t.mountedInstances) || r.add(e.children),
+				o && (t?.mountedInstances?.add(e.children), s()),
+				u(
+					() => (
+						t?.mountedInstances?.add(e.children),
 						() => {
-							var r;
-							null == t ||
-								null == (r = t.mountedInstances) ||
-								r.delete(e.children);
+							t?.mountedInstances?.delete(e.children);
 						}
-					);
-				}),
+					),
+				),
 				u(
 					() => (
 						t && (t._pendingUpdate = s),
@@ -915,81 +894,41 @@
 			);
 		}
 	},
-	7603,
+	6196,
 	(e, t, r) => {
 		'use strict';
-		(Object.defineProperty(r, '__esModule', { value: !0 }),
-			Object.defineProperty(r, 'AmpStateContext', {
-				enumerable: !0,
-				get: function () {
-					return n;
-				},
-			}));
-		let n = e.r(2879)._(e.r(6960)).default.createContext({});
-	},
-	3830,
-	(e, t, r) => {
-		'use strict';
-		function n(e) {
-			let {
-				ampFirst: t = !1,
-				hybrid: r = !1,
-				hasQuery: n = !1,
-			} = void 0 === e ? {} : e;
-			return t || (r && n);
-		}
-		(Object.defineProperty(r, '__esModule', { value: !0 }),
-			Object.defineProperty(r, 'isInAmpMode', {
-				enumerable: !0,
-				get: function () {
-					return n;
-				},
-			}));
-	},
-	4892,
-	(e, t, r) => {
-		'use strict';
-		(Object.defineProperty(r, '__esModule', { value: !0 }),
-			!(function (e, t) {
-				for (var r in t)
-					Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
-			})(r, {
-				default: function () {
-					return h;
-				},
-				defaultHead: function () {
-					return f;
-				},
-			}));
-		let n = e.r(2879),
-			o = e.r(7602),
-			u = e.r(4601),
-			i = o._(e.r(6960)),
-			s = n._(e.r(7037)),
-			a = e.r(7603),
-			c = e.r(6535),
-			l = e.r(3830);
-		function f(e) {
-			void 0 === e && (e = !1);
-			let t = [(0, u.jsx)('meta', { charSet: 'utf-8' }, 'charset')];
-			return (
-				e ||
-					t.push(
-						(0, u.jsx)(
-							'meta',
-							{ name: 'viewport', content: 'width=device-width' },
-							'viewport',
-						),
-					),
-				t
-			);
+		Object.defineProperty(r, '__esModule', { value: !0 });
+		var n = {
+			default: function () {
+				return h;
+			},
+			defaultHead: function () {
+				return f;
+			},
+		};
+		for (var o in n) Object.defineProperty(r, o, { enumerable: !0, get: n[o] });
+		let u = e.r(2879),
+			i = e.r(7602),
+			s = e.r(4601),
+			a = i._(e.r(6960)),
+			c = u._(e.r(4366)),
+			l = e.r(8065);
+		function f() {
+			return [
+				(0, s.jsx)('meta', { charSet: 'utf-8' }, 'charset'),
+				(0, s.jsx)(
+					'meta',
+					{ name: 'viewport', content: 'width=device-width' },
+					'viewport',
+				),
+			];
 		}
 		function d(e, t) {
 			return 'string' == typeof t || 'number' == typeof t
 				? e
-				: t.type === i.default.Fragment
+				: t.type === a.default.Fragment
 					? e.concat(
-							i.default.Children.toArray(t.props.children).reduce(
+							a.default.Children.toArray(t.props.children).reduce(
 								(e, t) =>
 									'string' == typeof t || 'number' == typeof t
 										? e
@@ -999,66 +938,61 @@
 						)
 					: e.concat(t);
 		}
-		e.r(8443);
+		e.r(8114);
 		let p = ['name', 'httpEquiv', 'charSet', 'itemProp'];
-		function y(e, t) {
-			let { inAmpMode: r } = t;
+		function y(e) {
+			let t, r, n, o;
 			return e
 				.reduce(d, [])
 				.reverse()
-				.concat(f(r).reverse())
+				.concat(f().reverse())
 				.filter(
-					(function () {
-						let e = new Set(),
-							t = new Set(),
-							r = new Set(),
-							n = {};
-						return (o) => {
-							let u = !0,
-								i = !1;
-							if (o.key && 'number' != typeof o.key && o.key.indexOf('$') > 0) {
-								i = !0;
-								let t = o.key.slice(o.key.indexOf('$') + 1);
-								e.has(t) ? (u = !1) : e.add(t);
-							}
-							switch (o.type) {
-								case 'title':
-								case 'base':
-									t.has(o.type) ? (u = !1) : t.add(o.type);
-									break;
-								case 'meta':
-									for (let e = 0, t = p.length; e < t; e++) {
-										let t = p[e];
-										if (o.props.hasOwnProperty(t))
-											if ('charSet' === t) r.has(t) ? (u = !1) : r.add(t);
-											else {
-												let e = o.props[t],
-													r = n[t] || new Set();
-												('name' !== t || !i) && r.has(e)
-													? (u = !1)
-													: (r.add(e), (n[t] = r));
-											}
-									}
-							}
-							return u;
-						};
-					})(),
+					((t = new Set()),
+					(r = new Set()),
+					(n = new Set()),
+					(o = {}),
+					(e) => {
+						let u = !0,
+							i = !1;
+						if (e.key && 'number' != typeof e.key && e.key.indexOf('$') > 0) {
+							i = !0;
+							let r = e.key.slice(e.key.indexOf('$') + 1);
+							t.has(r) ? (u = !1) : t.add(r);
+						}
+						switch (e.type) {
+							case 'title':
+							case 'base':
+								r.has(e.type) ? (u = !1) : r.add(e.type);
+								break;
+							case 'meta':
+								for (let t = 0, r = p.length; t < r; t++) {
+									let r = p[t];
+									if (e.props.hasOwnProperty(r))
+										if ('charSet' === r) n.has(r) ? (u = !1) : n.add(r);
+										else {
+											let t = e.props[r],
+												n = o[r] || new Set();
+											('name' !== r || !i) && n.has(t)
+												? (u = !1)
+												: (n.add(t), (o[r] = n));
+										}
+								}
+						}
+						return u;
+					}),
 				)
 				.reverse()
 				.map((e, t) => {
 					let r = e.key || t;
-					return i.default.cloneElement(e, { key: r });
+					return a.default.cloneElement(e, { key: r });
 				});
 		}
-		let h = function (e) {
-			let { children: t } = e,
-				r = (0, i.useContext)(a.AmpStateContext),
-				n = (0, i.useContext)(c.HeadManagerContext);
-			return (0, u.jsx)(s.default, {
+		let h = function ({ children: e }) {
+			let t = (0, a.useContext)(l.HeadManagerContext);
+			return (0, s.jsx)(c.default, {
 				reduceComponentsToState: y,
-				headManager: n,
-				inAmpMode: (0, l.isInAmpMode)(r),
-				children: t,
+				headManager: t,
+				children: e,
 			});
 		};
 		('function' == typeof r.default ||
@@ -1068,81 +1002,77 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	515,
+	6095,
 	(e, t, r) => {
 		'use strict';
-		(Object.defineProperty(r, '__esModule', { value: !0 }),
-			!(function (e, t) {
-				for (var r in t)
-					Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
-			})(r, {
-				NEXT_REQUEST_META: function () {
-					return n;
-				},
-				addRequestMeta: function () {
-					return i;
-				},
-				getRequestMeta: function () {
-					return o;
-				},
-				removeRequestMeta: function () {
-					return s;
-				},
-				setRequestMeta: function () {
-					return u;
-				},
-			}));
-		let n = Symbol.for('NextInternalRequestMeta');
-		function o(e, t) {
-			let r = e[n] || {};
+		Object.defineProperty(r, '__esModule', { value: !0 });
+		var n = {
+			NEXT_REQUEST_META: function () {
+				return u;
+			},
+			addRequestMeta: function () {
+				return a;
+			},
+			getRequestMeta: function () {
+				return i;
+			},
+			removeRequestMeta: function () {
+				return c;
+			},
+			setRequestMeta: function () {
+				return s;
+			},
+		};
+		for (var o in n) Object.defineProperty(r, o, { enumerable: !0, get: n[o] });
+		let u = Symbol.for('NextInternalRequestMeta');
+		function i(e, t) {
+			let r = e[u] || {};
 			return 'string' == typeof t ? r[t] : r;
 		}
-		function u(e, t) {
-			return ((e[n] = t), t);
-		}
-		function i(e, t, r) {
-			let n = o(e);
-			return ((n[t] = r), u(e, n));
-		}
 		function s(e, t) {
-			let r = o(e);
-			return (delete r[t], u(e, r));
+			return ((e[u] = t), t);
+		}
+		function a(e, t, r) {
+			let n = i(e);
+			return ((n[t] = r), s(e, n));
+		}
+		function c(e, t) {
+			let r = i(e);
+			return (delete r[t], s(e, r));
 		}
 	},
-	3933,
+	1201,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
 			Object.defineProperty(r, 'default', {
 				enumerable: !0,
 				get: function () {
-					return l;
+					return y;
 				},
 			}));
 		let n = e.r(2879),
 			o = e.r(4601),
 			u = n._(e.r(6960)),
-			i = n._(e.r(4892)),
+			i = n._(e.r(6196)),
 			s = {
 				400: 'Bad Request',
 				404: 'This page could not be found',
 				405: 'Method Not Allowed',
 				500: 'Internal Server Error',
 			};
-		function a(t) {
-			let r,
-				{ req: n, res: o, err: u } = t,
-				i = o && o.statusCode ? o.statusCode : u ? u.statusCode : 404;
-			if ('undefined' != typeof window) r = window.location.hostname;
-			else if (n) {
-				let { getRequestMeta: t } = e.r(515),
-					o = t(n, 'initURL');
-				o && (r = new URL(o).hostname);
+		function a({ req: t, res: r, err: n }) {
+			let o,
+				u = r && r.statusCode ? r.statusCode : n ? n.statusCode : 404;
+			if ('undefined' != typeof window) o = window.location.hostname;
+			else if (t) {
+				let { getRequestMeta: r } = e.r(6095),
+					n = r(t, 'initURL');
+				n && (o = new URL(n).hostname);
 			}
-			return { statusCode: i, hostname: r };
+			return { statusCode: u, hostname: o };
 		}
 		let c = {
-			error: {
 				fontFamily:
 					'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
 				height: '100vh',
@@ -1152,8 +1082,8 @@
 				alignItems: 'center',
 				justifyContent: 'center',
 			},
-			desc: { lineHeight: '48px' },
-			h1: {
+			l = { lineHeight: '48px' },
+			f = {
 				display: 'inline-block',
 				margin: '0 20px 0 0',
 				paddingRight: 23,
@@ -1161,46 +1091,50 @@
 				fontWeight: 500,
 				verticalAlign: 'top',
 			},
-			h2: { fontSize: 14, fontWeight: 400, lineHeight: '28px' },
-			wrap: { display: 'inline-block' },
-		};
-		class l extends u.default.Component {
+			d = { fontSize: 14, fontWeight: 400, lineHeight: '28px' },
+			p = { display: 'inline-block' };
+		class y extends u.default.Component {
+			static {
+				this.displayName = 'ErrorPage';
+			}
+			static {
+				this.getInitialProps = a;
+			}
+			static {
+				this.origGetInitialProps = a;
+			}
 			render() {
 				let { statusCode: e, withDarkMode: t = !0 } = this.props,
 					r = this.props.title || s[e] || 'An unexpected error has occurred';
 				return (0, o.jsxs)('div', {
-					style: c.error,
+					style: c,
 					children: [
 						(0, o.jsx)(i.default, {
 							children: (0, o.jsx)('title', {
 								children: e
-									? e + ': ' + r
+									? `${e}: ${r}`
 									: 'Application error: a client-side exception has occurred',
 							}),
 						}),
 						(0, o.jsxs)('div', {
-							style: c.desc,
+							style: l,
 							children: [
 								(0, o.jsx)('style', {
 									dangerouslySetInnerHTML: {
-										__html:
-											'body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}' +
-											(t
-												? '@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}'
-												: ''),
+										__html: `body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}${t ? '@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}' : ''}`,
 									},
 								}),
 								e
 									? (0, o.jsx)('h1', {
 											className: 'next-error-h1',
-											style: c.h1,
+											style: f,
 											children: e,
 										})
 									: null,
 								(0, o.jsx)('div', {
-									style: c.wrap,
+									style: p,
 									children: (0, o.jsxs)('h2', {
-										style: c.h2,
+										style: d,
 										children: [
 											this.props.title || e
 												? r
@@ -1229,39 +1163,36 @@
 				});
 			}
 		}
-		((l.displayName = 'ErrorPage'),
-			(l.getInitialProps = a),
-			(l.origGetInitialProps = a),
-			('function' == typeof r.default ||
-				('object' == typeof r.default && null !== r.default)) &&
-				void 0 === r.default.__esModule &&
-				(Object.defineProperty(r.default, '__esModule', { value: !0 }),
-				Object.assign(r.default, r),
-				(t.exports = r.default)));
+		('function' == typeof r.default ||
+			('object' == typeof r.default && null !== r.default)) &&
+			void 0 === r.default.__esModule &&
+			(Object.defineProperty(r.default, '__esModule', { value: !0 }),
+			Object.assign(r.default, r),
+			(t.exports = r.default));
 	},
-	198,
+	2162,
 	(e, t, r) => {
-		t.exports = e.r(3933);
+		t.exports = e.r(1201);
 	},
-	4241,
+	2762,
 	(e, t, r) => {
 		let n = '/_error';
-		((window.__NEXT_P = window.__NEXT_P || []).push([n, () => e.r(198)]),
+		((window.__NEXT_P = window.__NEXT_P || []).push([n, () => e.r(2162)]),
 			t.hot &&
 				t.hot.dispose(function () {
 					window.__NEXT_P.push([n]);
 				}));
 	},
-	5923,
+	7114,
 	(e) => {
-		e.v((e) => Promise.resolve().then(() => e(3933)));
+		e.v((e) => Promise.resolve().then(() => e(1201)));
 	},
-	6376,
+	8093,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/db995d3b81bcf324.js'].map((t) => e.l(t)),
-			).then(() => t(9979)),
+				['static/chunks/001ccb3ba18d9746.js'].map((t) => e.l(t)),
+			).then(() => t(2314)),
 		);
 	},
 ]);

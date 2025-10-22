@@ -1,80 +1,76 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	515,
+	6095,
 	(e, t, r) => {
 		'use strict';
-		(Object.defineProperty(r, '__esModule', { value: !0 }),
-			!(function (e, t) {
-				for (var r in t)
-					Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
-			})(r, {
-				NEXT_REQUEST_META: function () {
-					return n;
-				},
-				addRequestMeta: function () {
-					return l;
-				},
-				getRequestMeta: function () {
-					return o;
-				},
-				removeRequestMeta: function () {
-					return s;
-				},
-				setRequestMeta: function () {
-					return i;
-				},
-			}));
-		let n = Symbol.for('NextInternalRequestMeta');
-		function o(e, t) {
-			let r = e[n] || {};
+		Object.defineProperty(r, '__esModule', { value: !0 });
+		var n = {
+			NEXT_REQUEST_META: function () {
+				return i;
+			},
+			addRequestMeta: function () {
+				return a;
+			},
+			getRequestMeta: function () {
+				return l;
+			},
+			removeRequestMeta: function () {
+				return d;
+			},
+			setRequestMeta: function () {
+				return s;
+			},
+		};
+		for (var o in n) Object.defineProperty(r, o, { enumerable: !0, get: n[o] });
+		let i = Symbol.for('NextInternalRequestMeta');
+		function l(e, t) {
+			let r = e[i] || {};
 			return 'string' == typeof t ? r[t] : r;
 		}
-		function i(e, t) {
-			return ((e[n] = t), t);
-		}
-		function l(e, t, r) {
-			let n = o(e);
-			return ((n[t] = r), i(e, n));
-		}
 		function s(e, t) {
-			let r = o(e);
-			return (delete r[t], i(e, r));
+			return ((e[i] = t), t);
+		}
+		function a(e, t, r) {
+			let n = l(e);
+			return ((n[t] = r), s(e, n));
+		}
+		function d(e, t) {
+			let r = l(e);
+			return (delete r[t], s(e, r));
 		}
 	},
-	3933,
+	1201,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
 			Object.defineProperty(r, 'default', {
 				enumerable: !0,
 				get: function () {
-					return u;
+					return p;
 				},
 			}));
 		let n = e.r(2879),
 			o = e.r(4601),
 			i = n._(e.r(6960)),
-			l = n._(e.r(4892)),
+			l = n._(e.r(6196)),
 			s = {
 				400: 'Bad Request',
 				404: 'This page could not be found',
 				405: 'Method Not Allowed',
 				500: 'Internal Server Error',
 			};
-		function d(t) {
-			let r,
-				{ req: n, res: o, err: i } = t,
-				l = o && o.statusCode ? o.statusCode : i ? i.statusCode : 404;
-			if ('undefined' != typeof window) r = window.location.hostname;
-			else if (n) {
-				let { getRequestMeta: t } = e.r(515),
-					o = t(n, 'initURL');
-				o && (r = new URL(o).hostname);
+		function a({ req: t, res: r, err: n }) {
+			let o,
+				i = r && r.statusCode ? r.statusCode : n ? n.statusCode : 404;
+			if ('undefined' != typeof window) o = window.location.hostname;
+			else if (t) {
+				let { getRequestMeta: r } = e.r(6095),
+					n = r(t, 'initURL');
+				n && (o = new URL(n).hostname);
 			}
-			return { statusCode: l, hostname: r };
+			return { statusCode: i, hostname: o };
 		}
-		let a = {
-			error: {
+		let d = {
 				fontFamily:
 					'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
 				height: '100vh',
@@ -84,8 +80,8 @@
 				alignItems: 'center',
 				justifyContent: 'center',
 			},
-			desc: { lineHeight: '48px' },
-			h1: {
+			u = { lineHeight: '48px' },
+			c = {
 				display: 'inline-block',
 				margin: '0 20px 0 0',
 				paddingRight: 23,
@@ -93,46 +89,50 @@
 				fontWeight: 500,
 				verticalAlign: 'top',
 			},
-			h2: { fontSize: 14, fontWeight: 400, lineHeight: '28px' },
-			wrap: { display: 'inline-block' },
-		};
-		class u extends i.default.Component {
+			f = { fontSize: 14, fontWeight: 400, lineHeight: '28px' },
+			h = { display: 'inline-block' };
+		class p extends i.default.Component {
+			static {
+				this.displayName = 'ErrorPage';
+			}
+			static {
+				this.getInitialProps = a;
+			}
+			static {
+				this.origGetInitialProps = a;
+			}
 			render() {
 				let { statusCode: e, withDarkMode: t = !0 } = this.props,
 					r = this.props.title || s[e] || 'An unexpected error has occurred';
 				return (0, o.jsxs)('div', {
-					style: a.error,
+					style: d,
 					children: [
 						(0, o.jsx)(l.default, {
 							children: (0, o.jsx)('title', {
 								children: e
-									? e + ': ' + r
+									? `${e}: ${r}`
 									: 'Application error: a client-side exception has occurred',
 							}),
 						}),
 						(0, o.jsxs)('div', {
-							style: a.desc,
+							style: u,
 							children: [
 								(0, o.jsx)('style', {
 									dangerouslySetInnerHTML: {
-										__html:
-											'body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}' +
-											(t
-												? '@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}'
-												: ''),
+										__html: `body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}${t ? '@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}' : ''}`,
 									},
 								}),
 								e
 									? (0, o.jsx)('h1', {
 											className: 'next-error-h1',
-											style: a.h1,
+											style: c,
 											children: e,
 										})
 									: null,
 								(0, o.jsx)('div', {
-									style: a.wrap,
+									style: h,
 									children: (0, o.jsxs)('h2', {
-										style: a.h2,
+										style: f,
 										children: [
 											this.props.title || e
 												? r
@@ -161,14 +161,11 @@
 				});
 			}
 		}
-		((u.displayName = 'ErrorPage'),
-			(u.getInitialProps = d),
-			(u.origGetInitialProps = d),
-			('function' == typeof r.default ||
-				('object' == typeof r.default && null !== r.default)) &&
-				void 0 === r.default.__esModule &&
-				(Object.defineProperty(r.default, '__esModule', { value: !0 }),
-				Object.assign(r.default, r),
-				(t.exports = r.default)));
+		('function' == typeof r.default ||
+			('object' == typeof r.default && null !== r.default)) &&
+			void 0 === r.default.__esModule &&
+			(Object.defineProperty(r.default, '__esModule', { value: !0 }),
+			Object.assign(r.default, r),
+			(t.exports = r.default));
 	},
 ]);
