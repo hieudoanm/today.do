@@ -39,7 +39,7 @@
 		"@capacitor/android": "7.4.4",
 		"@capacitor/core": "7.4.4",
 		"@capacitor/ios": "7.4.4",
-		"next": "16.0.0",
+		"next": "16.0.1",
 		"react": "19.2.0",
 		"react-dom": "19.2.0",
 		"react-icons": "5.5.0"
@@ -57,7 +57,7 @@
 		"@types/react-dom": "19.2.2",
 		"daisyui": "5.3.10",
 		"eslint": "9.38.0",
-		"eslint-config-next": "16.0.0",
+		"eslint-config-next": "16.0.1",
 		"fake-indexeddb": "6.2.4",
 		"husky": "9.1.7",
 		"jest": "30.2.0",
