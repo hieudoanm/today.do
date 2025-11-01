@@ -12,10 +12,11 @@
 
 | No  | Framework            | Meta                      | Maintainer       |
 | --- | -------------------- | ------------------------- | ---------------- |
-| 1   | [React][react]       | [Next.js][next.js]        | [Vercel][vercel] |
-| 2   | [Svelte][svelte]     | [SvelteKit][svelte-kit]   | [Vercel][vercel] |
-| 3   | [Solid.js][solid.js] | [SolidStart][solid-start] |                  |
-| 4   | [Vue][vue]           | [Nuxt][nuxt]              |                  |
+| 1   | [Angular][angular]   |                           | [Google][google] |
+| 2   | [React][react]       | [Next.js][next.js]        | [Vercel][vercel] |
+| 3   | [Svelte][svelte]     | [SvelteKit][svelte-kit]   | [Vercel][vercel] |
+| 4   | [Solid.js][solid.js] | [SolidStart][solid-start] |                  |
+| 5   | [Vue][vue]           | [Nuxt][nuxt]              |                  |
 
 ## Techstack
 
@@ -45,6 +46,7 @@
 | 9   | Mobile  |          | [iOS][apple-ios]             | [Apple][apple]         |
 
 [android]: https://www.android.com/
+[angular]: https://angular.dev/
 [apple]: https://www.apple.com
 [apple-ios]: https://www.apple.com/os/ios/
 [apple-macos]: https://www.apple.com/os/macos/

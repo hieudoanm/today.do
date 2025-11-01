@@ -1,6 +1,7 @@
 {
 	"name": "@today.do/solid",
 	"type": "module",
+	"packageManager": "pnpm@10.20.0",
 	"scripts": {
 		"dev": "vinxi dev",
 		"build": "vinxi build",

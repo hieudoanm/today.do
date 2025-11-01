@@ -1,0 +1,42 @@
+<div class="bg-base-200 flex h-screen flex-col items-center py-6">
+  <div class="bg-base-100 w-full max-w-md rounded-2xl p-6 shadow-lg">
+    <h1 class="mb-4 text-center text-2xl font-bold">{{ title() }} ({{ remaining() }} left)</h1>
+
+    <div class="mb-4 flex gap-2">
+      <input
+        type="text"
+        class="input input-bordered flex-1"
+        placeholder="Add a new task"
+        [(ngModel)]="newTask"
+        (keydown.enter)="addTask()"
+      />
+      <button class="btn btn-primary rounded-full" (click)="addTask()">+</button>
+    </div>
+
+    <ul class="space-y-2">
+      <li
+        *ngFor="let todo of tasks()"
+        class="bg-base-300 flex items-center justify-between rounded-lg p-3"
+      >
+        <div class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            class="checkbox checkbox-primary"
+            [checked]="todo.completed"
+            (change)="toggleTask(todo)"
+          />
+          <span
+            class="text-lg"
+            [class.text-gray-500]="todo.completed"
+            [class.line-through]="todo.completed"
+          >
+            {{ todo.text }}
+          </span>
+        </div>
+        <button class="btn btn-sm btn-error rounded-full" (click)="deleteTask(todo.id)">✕</button>
+      </li>
+    </ul>
+
+    <p *ngIf="tasks().length === 0" class="mt-4 text-center text-gray-500">No tasks yet!</p>
+  </div>
+</div>

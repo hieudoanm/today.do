@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-vue",
+  "name": "@today.do/nuxt",
   "type": "module",
   "private": true,
   "scripts": {
