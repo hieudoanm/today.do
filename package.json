@@ -56,7 +56,7 @@
 		"@types/react": "19.2.2",
 		"@types/react-dom": "19.2.2",
 		"daisyui": "5.3.10",
-		"eslint": "9.38.0",
+		"eslint": "9.39.0",
 		"eslint-config-next": "16.0.1",
 		"fake-indexeddb": "6.2.4",
 		"husky": "9.1.7",
