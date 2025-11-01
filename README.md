@@ -10,10 +10,12 @@
 
 ## Framework
 
-| No  | Framework            | Maintainer       |
-| --- | -------------------- | ---------------- |
-| 1   | [Next.js][next.js]   | [Vercel][vercel] |
-| 2   | [Solid.js][solid.js] |                  |
+| No  | Framework            | Meta                      | Maintainer       |
+| --- | -------------------- | ------------------------- | ---------------- |
+| 1   | [React][react]       | [Next.js][next.js]        | [Vercel][vercel] |
+| 2   | [Svelte][svelte]     | [SvelteKit][svelte-kit]   | [Vercel][vercel] |
+| 3   | [Solid.js][solid.js] | [SolidStart][solid-start] |                  |
+| 4   | [Vue][vue]           | [Nuxt][nuxt]              |                  |
 
 ## Techstack
 
@@ -59,10 +61,16 @@
 [microsoft-windows]: https://www.microsoft.com/en-us/windows/
 [mint]: https://linuxmint.com/
 [next.js]: https://nextjs.org/
+[nuxt]: https://nuxt.com/
 [prettier]: https://prettier.io/
+[react]: https://react.dev/
+[solid-start]: https://start.solidjs.com/
+[svelte]: https://svelte.dev/
+[svelte-kit]: https://svelte.dev/docs/kit/introduction
 [solid.js]: https://www.solidjs.com/
 [vercel]: https://vercel.com/
 [tailwindcss]: https://tailwindcss.com/
 [tauri]: https://v2.tauri.app/
 [typescript]: https://www.typescriptlang.org/
 [ubuntu]: https://ubuntu.com/
+[vue]: https://vuejs.org/
