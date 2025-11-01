@@ -4,8 +4,16 @@
 
 - [today.do](#todaydo)
   - [Table of Contents](#table-of-contents)
+  - [Framework](#framework)
   - [Techstack](#techstack)
   - [Operating System](#operating-system)
+
+## Framework
+
+| No  | Framework            | Maintainer       |
+| --- | -------------------- | ---------------- |
+| 1   | [Next.js][next.js]   | [Vercel][vercel] |
+| 2   | [Solid.js][solid.js] |                  |
 
 ## Techstack
 
@@ -17,9 +25,8 @@
 | 4   | DevTools  | Testing    | [Jest][jest]               |                        |
 | 5   | Styling   | Utilities  | [TailwindCSS][tailwindcss] |                        |
 | 6   | Styling   | Components | [DaisyUI][daisyui]         |                        |
-| 7   | Framework | Web        | [Next.js][next.js]         | [Vercel][vercel]       |
-| 8   | Framework | Mobile     | [Capacitor][capacitor]     | [Ionic][ionic]         |
-| 9   | Framework | Desktop    | [Tauri][tauri]             |                        |
+| 7   | Framework | Mobile     | [Capacitor][capacitor]     | [Ionic][ionic]         |
+| 8   | Framework | Desktop    | [Tauri][tauri]             |                        |
 
 ## Operating System
 
@@ -53,6 +60,7 @@
 [mint]: https://linuxmint.com/
 [next.js]: https://nextjs.org/
 [prettier]: https://prettier.io/
+[solid.js]: https://www.solidjs.com/
 [vercel]: https://vercel.com/
 [tailwindcss]: https://tailwindcss.com/
 [tauri]: https://v2.tauri.app/
