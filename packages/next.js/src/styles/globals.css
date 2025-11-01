@@ -1,12 +1,12 @@
 @import 'tailwindcss';
 
-@plugin "daisyui" {
+@plugin 'daisyui' {
 	themes:
 		light --default,
 		nothing --prefersdark;
 }
 
-@plugin "daisyui/theme" {
+@plugin 'daisyui/theme' {
 	name: 'nothing';
 	default: true; /* Set this as the default theme */
 	prefersdark: true; /* Auto-use for dark mode based on system setting */
