@@ -41,7 +41,7 @@
     "@angular/compiler-cli": "20.3.9",
     "@tailwindcss/postcss": "4.1.16",
     "@types/express": "5.0.5",
-    "@types/jasmine": "5.1.0",
+    "@types/jasmine": "5.1.12",
     "@types/node": "20.17.19",
     "daisyui": "5.3.10",
     "jasmine-core": "5.9.0",
