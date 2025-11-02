@@ -52,6 +52,6 @@
     "karma-jasmine-html-reporter": "2.1.0",
     "prettier-plugin-tailwindcss": "0.7.1",
     "tailwindcss": "4.1.16",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }
