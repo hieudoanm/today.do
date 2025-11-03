@@ -42,7 +42,7 @@
     "@tailwindcss/postcss": "4.1.16",
     "@types/express": "5.0.5",
     "@types/jasmine": "5.1.12",
-    "@types/node": "24.9.2",
+    "@types/node": "24.10.0",
     "daisyui": "5.4.2",
     "jasmine-core": "5.12.1",
     "karma": "6.4.4",
