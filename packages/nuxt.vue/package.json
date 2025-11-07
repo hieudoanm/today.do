@@ -19,8 +19,8 @@
     "vue-router": "4.6.3"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.1.16",
+    "@tailwindcss/vite": "4.1.17",
     "daisyui": "5.4.5",
-    "tailwindcss": "4.1.16"
+    "tailwindcss": "4.1.17"
   }
 }
