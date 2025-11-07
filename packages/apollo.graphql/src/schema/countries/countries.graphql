@@ -1,0 +1,35 @@
+type Query {
+  countries: [Country]
+  country(cca3: String!): Country
+}
+
+type Country {
+  name: Name
+  cca2: String
+  cca3: String
+  cioc: String
+  ccn3: String
+  fifa: String
+  status: String
+  region: String
+  subregion: String
+  flag: String
+  startOfWeek: String
+  population: Int
+  area: Float
+  tld: [String]
+  capital: [String]
+  altSpellings: [String]
+  borders: [String]
+  timezones: [String]
+  continents: [String]
+  latlng: [Float]
+  independent: Boolean
+  unMember: Boolean
+  landlocked: Boolean
+}
+
+type Name {
+  common: String
+  official: String
+}

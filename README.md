@@ -4,21 +4,12 @@
 
 - [today.do](#todaydo)
   - [Table of Contents](#table-of-contents)
-  - [Framework](#framework)
-  - [Techstack](#techstack)
+  - [DevTools](#devtools)
+  - [Front-end Framework](#front-end-framework)
+  - [Back-end for Front-end](#back-end-for-front-end)
   - [Operating System](#operating-system)
 
-## Framework
-
-| No  | Framework            | Meta                      | Maintainer       |
-| --- | -------------------- | ------------------------- | ---------------- |
-| 1   | [Angular][angular]   |                           | [Google][google] |
-| 2   | [React][react]       | [Next.js][next.js]        | [Vercel][vercel] |
-| 3   | [Svelte][svelte]     | [SvelteKit][svelte-kit]   | [Vercel][vercel] |
-| 4   | [Solid.js][solid.js] | [SolidStart][solid-start] |                  |
-| 5   | [Vue][vue]           | [Nuxt][nuxt]              |                  |
-
-## Techstack
+## DevTools
 
 | No. | Group     | Subgroup   | Technology                 | Maintainer             |
 | --- | --------- | ---------- | -------------------------- | ---------------------- |
@@ -30,6 +21,25 @@
 | 6   | Styling   | Components | [DaisyUI][daisyui]         |                        |
 | 7   | Framework | Mobile     | [Capacitor][capacitor]     | [Ionic][ionic]         |
 | 8   | Framework | Desktop    | [Tauri][tauri]             |                        |
+
+## Front-end Framework
+
+| No  | Framework            | Meta                      | Maintainer       |
+| --- | -------------------- | ------------------------- | ---------------- |
+| 1   | [Angular][angular]   | SSR                       | [Google][google] |
+| 2   | [React][react]       | [Next.js][next.js]        | [Vercel][vercel] |
+| 3   | [Svelte][svelte]     | [SvelteKit][svelte-kit]   | [Vercel][vercel] |
+| 4   | [Solid.js][solid.js] | [SolidStart][solid-start] |                  |
+| 5   | [Vue][vue]           | [Nuxt][nuxt]              |                  |
+
+## Back-end for Front-end
+
+| Group     | Name                                  |
+| --------- | ------------------------------------- |
+| Framework | [Apollo][apollo] + [GraphQL][graphql] |
+| Framework | [tRPC](https://trpc.io/)              |
+| ORM       | [Drizzle](https://orm.drizzle.team/)  |
+| ORM       | [Prisma](https://www.prisma.io/)      |
 
 ## Operating System
 
@@ -47,6 +57,7 @@
 
 [android]: https://www.android.com/
 [angular]: https://angular.dev/
+[apollo]: https://www.apollographql.com/
 [apple]: https://www.apple.com
 [apple-ios]: https://www.apple.com/os/ios/
 [apple-macos]: https://www.apple.com/os/macos/
@@ -57,6 +68,7 @@
 [eslint]: https://eslint.org/
 [fedora]: https://www.fedoraproject.org/
 [google]: https://www.google.com/
+[graphql]: https://graphql.org/
 [ionic]: https://ionicframework.com/
 [jest]: https://jestjs.io/
 [microsoft]: https://www.microsoft.com/
