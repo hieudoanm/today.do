@@ -31,3 +31,5 @@ jobs:
         run: pnpm run lint
       - name: Build Production
         run: pnpm run build
+        env:
+          DATABASE_URL: "file:./dev.db"
