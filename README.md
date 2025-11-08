@@ -37,6 +37,7 @@
 | Group     | Name                                  |
 | --------- | ------------------------------------- |
 | Framework | [Apollo][apollo] + [GraphQL][graphql] |
+| Framework | [gRPC](https://grpc.io/)              |
 | Framework | [tRPC](https://trpc.io/)              |
 | ORM       | [Drizzle](https://orm.drizzle.team/)  |
 | ORM       | [Prisma](https://www.prisma.io/)      |
