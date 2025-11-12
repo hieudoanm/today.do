@@ -23,7 +23,7 @@
 		"@tailwindcss/typography": "0.5.19",
 		"@tailwindcss/vite": "4.1.17",
 		"@types/node": "24.10.0",
-		"daisyui": "5.4.7",
+		"daisyui": "5.5.0",
 		"eslint": "9.39.1",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-svelte": "3.13.0",
