@@ -13,7 +13,7 @@
   "homepage": "https://github.com/hieudoanm/today.do#readme",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
-  "packageManager": "pnpm@10.21.0",
+  "packageManager": "pnpm@10.22.0",
   "private": true,
   "scripts": {
     "format": "prettier --cache --write .",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@eslint/js": "9.39.1",
     "@types/express": "5.0.5",
-    "@types/node": "24.10.0",
+    "@types/node": "24.10.1",
     "eslint": "9.39.1",
     "globals": "16.5.0",
     "nodemon": "3.1.11",
@@ -37,7 +37,7 @@
     "rimraf": "6.1.0",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.3",
+    "typescript-eslint": "8.46.4",
     "wrangler": "4.47.0"
   },
   "keywords": [
