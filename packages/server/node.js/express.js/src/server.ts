@@ -1,6 +1,7 @@
 import { Task } from '@prisma/client';
 import express, { Request, Response } from 'express';
 import { prismaClient } from './prisma/prisma.client';
+import { getTasks } from './services/tasks.service';
 
 const app = express();
 app.use(express.json());
@@ -10,12 +11,10 @@ app.use(express.json());
 // ---------------------
 app.get('/tasks', async (request: Request, response: Response) => {
   try {
+    const listId: number = Number(request.params.listId);
     const limit: number = Number(request.params.limit);
     const offset: number = Number(request.params.offset);
-    const tasks: Task[] = await prismaClient.task.findMany({
-      take: limit || 100,
-      skip: offset || 0,
-    });
+    const tasks: Task[] = await getTasks({ listId, limit, offset });
     response.json({ total: tasks.length, tasks });
   } catch (error) {
     console.error(error);
@@ -30,9 +29,7 @@ app.get('/tasks/:id', async (request: Request, response: Response) => {
   try {
     const id = Number(request.params.id);
     const task = await prismaClient.task.findUnique({ where: { id } });
-
     if (!task) return response.status(404).json({ error: 'Task not found' });
-
     response.json(task);
   } catch (error) {
     console.error(error);
