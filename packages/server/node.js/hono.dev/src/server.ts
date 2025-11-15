@@ -51,12 +51,14 @@ app.get('/tasks/:id', async (c) => {
 app.post('/tasks', async (c) => {
   try {
     const body = await c.req.json<{
+      listId: number;
       text: string;
       completed?: boolean;
     }>();
 
     const task = await prismaClient.task.create({
       data: {
+        listId: body.listId,
         text: body.text,
         completed: body.completed ?? false,
       },

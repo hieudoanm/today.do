@@ -117,6 +117,7 @@ export type TaskActionsUpdateArgs = {
 
 export type TaskInput = {
   completed: Scalars['Boolean']['input'];
+  listId: Scalars['Int']['input'];
   text: Scalars['String']['input'];
 };
 

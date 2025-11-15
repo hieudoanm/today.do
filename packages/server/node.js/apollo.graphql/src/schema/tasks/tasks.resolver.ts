@@ -1,10 +1,10 @@
 import { Task } from '@prisma/client';
-import { prismaClient } from '../../prisma/prisma.client';
 import {
   TaskActionsAddArgs,
   TaskActionsDeleteArgs,
   TaskActionsUpdateArgs,
 } from '../../generated/graphql';
+import { prismaClient } from '../../prisma/prisma.client';
 
 export const resolvers = {
   Query: {
@@ -28,6 +28,7 @@ export const resolvers = {
       { taskInput }: TaskActionsAddArgs
     ): Promise<Task> => {
       const data = {
+        listId: taskInput.listId,
         text: taskInput.text,
         completed: taskInput.completed ?? false,
       };

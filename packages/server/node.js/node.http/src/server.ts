@@ -53,12 +53,9 @@ const server = createServer(async (req, res) => {
     // POST /tasks
     if (method === 'POST' && pathname === '/tasks') {
       const body = await parseBody(req);
-      const { text, completed = false } = body as Task;
-
-      const task = await prismaClient.task.create({
-        data: { text, completed },
-      });
-
+      const { listId = 0, text = '', completed = false } = body as Task;
+      const data = { listId, text, completed };
+      const task = await prismaClient.task.create({ data });
       res.writeHead(201, { 'Content-Type': 'application/json' });
       return res.end(JSON.stringify(task));
     }

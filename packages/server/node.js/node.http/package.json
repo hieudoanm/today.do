@@ -16,10 +16,12 @@
   "packageManager": "pnpm@10.22.0",
   "private": true,
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "start": "node",
     "format": "prettier --cache --write .",
-    "dev": "nodemon"
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "prebuild": "prisma format && prisma generate",
+    "build": "rimraf dist && tsc",
+    "dev": "nodemon",
+    "start": "node"
   },
   "dependencies": {
     "@prisma/client": "6.19.0"

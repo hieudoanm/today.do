@@ -22,6 +22,7 @@ type TaskActions {
 }
 
 input TaskInput {
+  listId: Int!
   text: String!
   completed: Boolean!
 }

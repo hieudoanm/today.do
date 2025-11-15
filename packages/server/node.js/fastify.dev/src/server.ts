@@ -63,16 +63,15 @@ fastify.get<{ Params: { id: string } }>(
 fastify.post(
   '/tasks',
   async (
-    request: FastifyRequest<{ Body: { text: string; completed: boolean } }>,
+    request: FastifyRequest<{
+      Body: { listId: number; text: string; completed: boolean };
+    }>,
     reply: FastifyReply
   ) => {
     try {
-      const { text, completed = false } = request.body;
-
-      const task = await prismaClient.task.create({
-        data: { text, completed },
-      });
-
+      const { listId = 0, text = '', completed = false } = request.body;
+      const data = { listId, text, completed };
+      const task = await prismaClient.task.create({ data });
       return reply.status(201).send(task);
     } catch (error) {
       fastify.log.error(error);

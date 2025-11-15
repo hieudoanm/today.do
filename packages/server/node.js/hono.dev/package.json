@@ -18,8 +18,10 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "prebuild": "prisma format && prisma generate",
     "build": "rimraf dist && tsc",
-    "dev": "prisma generate && ts-node src/server.ts"
+    "dev": "prisma generate && ts-node src/server.ts",
+    "start": "node"
   },
   "dependencies": {
     "@hono/node-server": "1.19.6",

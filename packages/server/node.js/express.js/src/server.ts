@@ -45,12 +45,9 @@ app.get('/tasks/:id', async (request: Request, response: Response) => {
 // ---------------------
 app.post('/tasks', async (request: Request, response: Response) => {
   try {
-    const { text, completed = false } = request.body;
-
-    const task = await prismaClient.task.create({
-      data: { text, completed },
-    });
-
+    const { listId = 0, text = '', completed = false } = request.body;
+    const data = { listId, text, completed };
+    const task = await prismaClient.task.create({ data });
     response.status(201).json(task);
   } catch (error) {
     console.error(error);

@@ -1,5 +1,5 @@
 {
-  "name": "@today.do/node-express",
+  "name": "@today.do/express",
   "version": "0.0.1",
   "description": "Today Do - Express Server",
   "main": "dist/server.js",
@@ -18,8 +18,10 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "prebuild": "prisma format && prisma generate",
     "build": "rimraf dist && tsc",
-    "dev": "prisma generate && nodemon"
+    "dev": "prisma generate && nodemon",
+    "start": "node"
   },
   "dependencies": {
     "@prisma/client": "6.19.0",
