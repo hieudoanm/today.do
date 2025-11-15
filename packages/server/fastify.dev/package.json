@@ -1,0 +1,46 @@
+{
+  "name": "@today.do/fastify",
+  "version": "0.0.1",
+  "description": "Today Do - Fastify.js",
+  "main": "dist/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/today.do.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/today.do/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/today.do#readme",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.21.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --cache --write .",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "build": "rimraf dist && tsc",
+    "dev": "prisma generate && nodemon"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.0",
+    "fastify": "5.6.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@types/node": "24.10.0",
+    "eslint": "9.39.1",
+    "globals": "16.5.0",
+    "nodemon": "3.1.11",
+    "prettier": "3.6.2",
+    "prisma": "6.19.0",
+    "rimraf": "6.1.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.3",
+    "wrangler": "4.46.0"
+  },
+  "keywords": [
+    "reverse",
+    "proxy"
+  ]
+}
