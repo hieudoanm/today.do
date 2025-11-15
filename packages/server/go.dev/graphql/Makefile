@@ -1,0 +1,13 @@
+format:
+	go fmt ./...
+
+vet:
+	go vet ./...
+
+run:
+	go run main.go
+
+build:
+	go fmt ./...
+	go vet ./...
+	go build -o ./bin/main ./main.go
