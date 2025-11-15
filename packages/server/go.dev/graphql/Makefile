@@ -1,10 +1,10 @@
 format:
 	go fmt ./...
 
-vet:
+lint:
 	go vet ./...
 
-run:
+dev:
 	go run main.go
 
 build:
