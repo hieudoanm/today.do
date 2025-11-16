@@ -1,7 +1,12 @@
 import { Task } from '@prisma/client';
 import express, { Request, Response } from 'express';
-import { prismaClient } from './prisma/prisma.client';
-import { getTasks } from './services/tasks.service';
+import {
+  createTask,
+  deleteTask,
+  getTask,
+  getTasks,
+  updateTask,
+} from './services/tasks.service';
 
 const app = express();
 app.use(express.json());
@@ -28,7 +33,7 @@ app.get('/tasks', async (request: Request, response: Response) => {
 app.get('/tasks/:id', async (request: Request, response: Response) => {
   try {
     const id = Number(request.params.id);
-    const task = await prismaClient.task.findUnique({ where: { id } });
+    const task = await getTask(id);
     if (!task) return response.status(404).json({ error: 'Task not found' });
     response.json(task);
   } catch (error) {
@@ -44,7 +49,7 @@ app.post('/tasks', async (request: Request, response: Response) => {
   try {
     const { listId = 0, text = '', completed = false } = request.body;
     const data = { listId, text, completed };
-    const task = await prismaClient.task.create({ data });
+    const task = await createTask(data);
     response.status(201).json(task);
   } catch (error) {
     console.error(error);
@@ -69,7 +74,7 @@ app.patch('/tasks/:id', async (request: Request, response: Response) => {
         .status(400)
         .json({ error: 'No fields provided to update' });
 
-    const task = await prismaClient.task.update({ where: { id }, data });
+    const task = await updateTask(id, data);
     response.json(task);
   } catch (error) {
     console.error(error);
@@ -83,7 +88,7 @@ app.patch('/tasks/:id', async (request: Request, response: Response) => {
 app.delete('/tasks/:id', async (request: Request, response: Response) => {
   try {
     const id = Number(request.params.id);
-    const task = await prismaClient.task.delete({ where: { id } });
+    const task = await deleteTask(id);
     response.json(task);
   } catch (error) {
     console.error(error);
