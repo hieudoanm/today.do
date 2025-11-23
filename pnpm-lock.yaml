@@ -352,8 +352,8 @@ importers:
         specifier: 6.4.1
         version: 6.4.1(encoding@0.1.13)(graphql@16.12.0)
       '@apollo/server':
-        specifier: 5.1.0
-        version: 5.1.0(graphql@16.12.0)
+        specifier: 5.2.0
+        version: 5.2.0(graphql@16.12.0)
       '@graphql-tools/schema':
         specifier: 10.0.29
         version: 10.0.29(graphql@16.12.0)
@@ -893,8 +893,8 @@ packages:
     peerDependencies:
       graphql: 14.x || 15.x || 16.x
 
-  '@apollo/server@5.1.0':
-    resolution: {integrity: sha512-azqwwmKp23TMFQkjE66622sdY2Ao9d+LrebW++b3rFCNxU6XAl/vRwInOh9ejNgShDQzVS+bdCIFQnH9+r+N1A==}
+  '@apollo/server@5.2.0':
+    resolution: {integrity: sha512-OEAl5bwVitkvVkmZlgWksSnQ10FUr6q2qJMdkexs83lsvOGmd/y81X5LoETmKZux8UiQsy/A/xzP00b8hTHH/w==}
     engines: {node: '>=20'}
     peerDependencies:
       graphql: ^16.11.0
@@ -12799,7 +12799,7 @@ snapshots:
       '@apollo/utils.logger': 3.0.0
       graphql: 16.12.0
 
-  '@apollo/server@5.1.0(graphql@16.12.0)':
+  '@apollo/server@5.2.0(graphql@16.12.0)':
     dependencies:
       '@apollo/cache-control-types': 1.0.3(graphql@16.12.0)
       '@apollo/server-gateway-interface': 2.0.0(graphql@16.12.0)
