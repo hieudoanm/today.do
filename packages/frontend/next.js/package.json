@@ -63,7 +63,7 @@
 		"kill-port": "2.0.1",
 		"prettier": "3.6.2",
 		"prettier-plugin-tailwindcss": "0.7.1",
-		"rimraf": "6.1.0",
+		"rimraf": "6.1.2",
 		"tailwindcss": "4.1.17",
 		"ts-jest": "29.4.5",
 		"ts-node": "10.9.2",
