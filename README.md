@@ -8,6 +8,9 @@
   - [Front-end Framework](#front-end-framework)
   - [Back-end for Front-end](#back-end-for-front-end)
   - [Back-end](#back-end)
+  - [Authentication](#authentication)
+  - [Email](#email)
+  - [Pay](#pay)
   - [Operating System](#operating-system)
 
 ## DevTools
@@ -51,6 +54,33 @@
 | Framework | [Fastify](https://fastify.dev/)   |
 | Framework | [Hono](https://hono.dev/)         |
 | Framework | [Nest.js](https://nestjs.com/)    |
+
+## Authentication
+
+- Inspired By
+  - [Auth0](https://auth0.com/)
+  - [Auth.js](https://authjs.dev/)
+  - [BetterAuth](https://www.better-auth.com/)
+  - [Clerk](https://clerk.com/)
+- Single Sign-on (SSO)
+  - [Google](https://www.google.com/)
+  - [Facebook](https://www.facebook.com/)
+  - [X](https://www.x.com/)
+- [OAuth](https://oauth.net/)
+
+## Email
+
+1. [MailChimp](https://www.mailchimp.com/)
+2. [MailGun](https://www.mailgun.com/)
+3. [SendGrid](https://sendgrid.com/)
+
+## Pay
+
+1. [Klarna](https://www.klarna.com/)
+2. [Paddle](https://www.paddle.com/)
+3. [Stripe](https://stripe.com/)
+   1. [Lemon Squeezy](https://www.lemonsqueezy.com/)
+4. [Paypal](https://www.paypal.com/)
 
 ## Operating System
 
