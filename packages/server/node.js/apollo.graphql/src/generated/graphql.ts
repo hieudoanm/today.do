@@ -270,8 +270,8 @@ export type ResolversParentTypes = {
 
 export type CountryResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['Country'] = ResolversParentTypes['Country'],
+  ParentType extends ResolversParentTypes['Country'] =
+    ResolversParentTypes['Country'],
 > = {
   altSpellings?: Resolver<
     Maybe<Array<Maybe<ResolversTypes['String']>>>,
@@ -348,8 +348,8 @@ export type CountryResolvers<
 
 export type MutationResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation'],
+  ParentType extends ResolversParentTypes['Mutation'] =
+    ResolversParentTypes['Mutation'],
 > = {
   taskActions?: Resolver<
     ResolversTypes['TaskActions'],
@@ -360,8 +360,8 @@ export type MutationResolvers<
 
 export type NameResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['Name'] = ResolversParentTypes['Name'],
+  ParentType extends ResolversParentTypes['Name'] =
+    ResolversParentTypes['Name'],
 > = {
   common?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   official?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -369,8 +369,8 @@ export type NameResolvers<
 
 export type QueryResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['Query'] = ResolversParentTypes['Query'],
+  ParentType extends ResolversParentTypes['Query'] =
+    ResolversParentTypes['Query'],
 > = {
   countries?: Resolver<
     Maybe<Array<Maybe<ResolversTypes['Country']>>>,
@@ -399,8 +399,8 @@ export type QueryResolvers<
 
 export type TaskResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['Task'] = ResolversParentTypes['Task'],
+  ParentType extends ResolversParentTypes['Task'] =
+    ResolversParentTypes['Task'],
 > = {
   completed?: Resolver<
     Maybe<ResolversTypes['Boolean']>,
@@ -423,8 +423,8 @@ export type TaskResolvers<
 
 export type TaskActionsResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['TaskActions'] = ResolversParentTypes['TaskActions'],
+  ParentType extends ResolversParentTypes['TaskActions'] =
+    ResolversParentTypes['TaskActions'],
 > = {
   add?: Resolver<
     ResolversTypes['Task'],

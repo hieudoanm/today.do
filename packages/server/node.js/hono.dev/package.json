@@ -25,21 +25,21 @@
   },
   "dependencies": {
     "@hono/node-server": "1.19.6",
-    "@prisma/client": "7.0.0",
-    "hono": "4.10.6"
+    "@prisma/client": "7.1.0",
+    "hono": "4.10.7"
   },
   "devDependencies": {
     "@eslint/js": "9.39.1",
     "@types/node": "24.10.1",
     "eslint": "9.39.1",
     "globals": "16.5.0",
-    "prettier": "3.6.2",
-    "prisma": "7.0.0",
+    "prettier": "3.7.4",
+    "prisma": "7.1.0",
     "rimraf": "6.1.2",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.47.0",
-    "wrangler": "4.50.0"
+    "typescript-eslint": "8.48.1",
+    "wrangler": "4.53.0"
   },
   "keywords": [
     "reverse",
