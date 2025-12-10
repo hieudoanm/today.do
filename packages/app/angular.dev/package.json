@@ -43,7 +43,7 @@
     "@types/express": "5.0.6",
     "@types/jasmine": "5.1.13",
     "@types/node": "24.10.2",
-    "daisyui": "5.5.8",
+    "daisyui": "5.5.11",
     "jasmine-core": "5.13.0",
     "karma": "6.4.4",
     "karma-chrome-launcher": "3.2.0",
