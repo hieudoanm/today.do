@@ -46,7 +46,7 @@
 	"devDependencies": {
 		"@capacitor/cli": "8.0.0",
 		"@eslint/eslintrc": "3.3.3",
-		"@tailwindcss/postcss": "4.1.17",
+		"@tailwindcss/postcss": "4.1.18",
 		"@tauri-apps/cli": "2.9.6",
 		"@testing-library/jest-dom": "6.9.1",
 		"@testing-library/react": "16.3.0",
@@ -64,7 +64,7 @@
 		"prettier": "3.7.4",
 		"prettier-plugin-tailwindcss": "0.7.2",
 		"rimraf": "6.1.2",
-		"tailwindcss": "4.1.17",
+		"tailwindcss": "4.1.18",
 		"ts-jest": "29.4.6",
 		"ts-node": "10.9.2",
 		"typescript": "5.9.3"
