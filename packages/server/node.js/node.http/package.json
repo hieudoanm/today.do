@@ -27,9 +27,9 @@
     "@prisma/client": "7.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.1",
-    "@types/node": "25.0.1",
-    "eslint": "9.39.1",
+    "@eslint/js": "9.39.2",
+    "@types/node": "25.0.2",
+    "eslint": "9.39.2",
     "globals": "16.5.0",
     "kill-port": "2.0.1",
     "nodemon": "3.1.11",
