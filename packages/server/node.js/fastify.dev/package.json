@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/hieudoanm/today.do/issues"
   },
-  "homepage": "https://github.com/hieudoanm/today.do#readme",
+  "homepage": "https://hieudoanm.github.io/today.do",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "packageManager": "pnpm@10.25.0",
