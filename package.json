@@ -36,6 +36,6 @@
     "jest-environment-jsdom": "30.2.0",
     "ts-jest": "29.4.6",
     "ts-node": "10.9.2",
-    "turbo": "2.7.1"
+    "turbo": "2.7.2"
   }
 }
