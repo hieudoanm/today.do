@@ -7,7 +7,7 @@
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "private": true,
-  "packageManager": "pnpm@10.26.0",
+  "packageManager": "pnpm@10.26.2",
   "scripts": {
     "format": "prettier --cache --write .",
     "serve": "webpack serve --mode=development",
