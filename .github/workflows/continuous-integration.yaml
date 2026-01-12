@@ -29,6 +29,9 @@ jobs:
         run: pnpm install
       - name: Linting
         run: pnpm run lint
+
+      - name: Test
+        run: pnpm run test
       - name: Build Production
         run: pnpm run build
         env:
