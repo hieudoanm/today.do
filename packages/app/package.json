@@ -24,9 +24,9 @@
 	"scripts": {
 		"predev": "rimraf .next && kill-port 3000",
 		"dev": "next dev --turbopack",
-		"prebuild": "rimraf ../../../docs",
+		"prebuild": "rimraf ../../docs",
 		"build": "next build --turbopack",
-		"postbuild": "touch ../../../docs/.nojekyll",
+		"postbuild": "touch ../../docs/.nojekyll",
 		"build:tauri": "tauri build",
 		"build:android": "rimraf mobile/android && cap add android",
 		"build:ios": "rimraf mobile/ios && cap add ios",

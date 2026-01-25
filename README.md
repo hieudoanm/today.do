@@ -6,16 +6,12 @@
   - [Table of Contents](#table-of-contents)
   - [Development](#development)
     - [DevTools](#devtools)
-    - [Front-end Framework](#front-end-framework)
     - [Back-end for Front-end](#back-end-for-front-end)
-    - [Back-end](#back-end)
     - [Databases](#databases)
   - [SaaS](#saas)
     - [Authentication](#authentication)
-    - [Email](#email)
     - [Payment](#payment)
   - [DevOps](#devops)
-    - [Serverless](#serverless)
     - [Operating System](#operating-system)
 
 ## Development
@@ -35,38 +31,11 @@
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-### Front-end Framework
-
-| No  | Framework            | Meta                      | Maintainer       |
-| --- | -------------------- | ------------------------- | ---------------- |
-| 1   | [Angular][angular]   | SSR                       | [Google][google] |
-| 2   | [React][react]       | [Next.js][next.js]        | [Vercel][vercel] |
-| 3   | [Svelte][svelte]     | [SvelteKit][svelte-kit]   | [Vercel][vercel] |
-| 4   | [Solid.js][solid.js] | [SolidStart][solid-start] |                  |
-| 5   | [Vue][vue]           | [Nuxt][nuxt]              |                  |
-
-[⬆️ Back to Table of Contents](#table-of-contents)
-
 ### Back-end for Front-end
 
-| Group     | Name                                  |
-| --------- | ------------------------------------- |
-| Framework | [Apollo][apollo] + [GraphQL][graphql] |
-| Framework | [gRPC](https://grpc.io/)              |
-| Framework | [tRPC](https://trpc.io/)              |
-| ORM       | [Drizzle](https://orm.drizzle.team/)  |
-| ORM       | [Prisma](https://www.prisma.io/)      |
-
-[⬆️ Back to Table of Contents](#table-of-contents)
-
-### Back-end
-
-| Group     | Name                              |
-| --------- | --------------------------------- |
-| Framework | [Express](https://expressjs.com/) |
-| Framework | [Fastify](https://fastify.dev/)   |
-| Framework | [Hono](https://hono.dev/)         |
-| Framework | [Nest.js](https://nestjs.com/)    |
+| Group     | Name                     |
+| --------- | ------------------------ |
+| Framework | [gRPC](https://grpc.io/) |
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
@@ -76,10 +45,7 @@
 | --- | ------------- | -------------------------------------- | --------------------------- | ---------------------- | ---------------- | ----------- |
 | 1   | Key-Value     | [Badger][hypermode-badger]             |                             | [Hypermode][hypermode] | Go               |             |
 | 2   | Key-Value     | LevelDB                                | [GitHub][gh-leveldb]        | [Google][google]       | C++              |             |
-| 3   | Key-Value     | [Memcached][memcached]                 | [GitHub][gh-memcached]      |                        | C                |             |
-| 4   | Key-Value     | [Redis][redis]                         | [GitHub][gh-redis]          |                        | C                | Recommended |
 | 5   | Key-Value     | [RocksDB][rocksdb]                     |                             | [Meta][meta]           |                  |             |
-| 6   | Key-Value     | [Valkey][valkey]                       | [GitHub][gh-valkey]         |                        | C                |             |
 | 7   | Documental    | [CouchDB][apache-couchdb]              | [GitHub][gh-apache-couchdb] | [Apache][apache]       | [Erlang][erlang] |             |
 | 8   | Documental    | [Couchbase](https://www.couchbase.com) |                             |                        |                  |             |
 | 9   | Documental    | [DynamoDB][aws-dynamodb]               |                             | [AWS][aws]             |                  |             |
@@ -92,8 +58,6 @@
 | 16  | Relational    | [MySQL][mysql]                         | [GitHub][gh-mysql]          |                        | C++              |             |
 | 17  | Relational    | [PostgreSQL][postgresql]               | [GitHub][gh-postgresql]     |                        | C                | Recommended |
 | 18  | Relational    | [SQLite][sqlite]                       | [GitHub][gh-sqlite]         |                        | C                |             |
-| 19  | Wide Column   | [Cassandra][apache-cassandra]          |                             | [Apache][apache]       |                  |             |
-| 20  | Wide Column   | [HBase][apache-hbase]                  |                             | [Apache][apache]       |                  |             |
 | 21  | Graph         | [DGraph][dgraph]                       |                             | [Hypermode][hypermode] |                  |             |
 | 22  | Graph         | [neo4j][neo4j]                         |                             |                        |                  |             |
 | 23  | Search Engine | [ElasticSearch][elasticsearch]         |                             |                        |                  |             |
@@ -107,7 +71,6 @@
 ### Authentication
 
 - Inspired By
-  - [Auth0](https://auth0.com/)
   - [Auth.js](https://authjs.dev/)
   - [BetterAuth](https://www.better-auth.com/)
   - [Clerk](https://clerk.com/)
@@ -119,45 +82,15 @@
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-### Email
-
-| Supersector | Sector | Subsector | Technology             | Open Source            | Maintainer | Language | Recommended |
-| ----------- | ------ | --------- | ---------------------- | ---------------------- | ---------- | -------- | ----------- |
-| Application | SaaS   | Email     | [SendGrid][sendgrid]   | [GitHub][gh-sendgrid]  |            | [JS][js] | Recommended |
-| Application | SaaS   | Email     | [Mailgun][mailgun]     | [GitHub][gh-mailgun]   |            | [Go][go] |             |
-| Application | SaaS   | Email     | [Postmark][postmark]   | [GitHub][gh-postmark]  |            | [TS][ts] |             |
-| Application | SaaS   | Email     | [MailChimp][mailchimp] | [GitHub][gh-mailchimp] |            | [JS][js] |             |
-| Application | SaaS   | Email     | [Resend][resend]       | [GitHub][gh-resend]    |            | [TS][ts] |             |
-
-[⬆️ Back to Table of Contents](#table-of-contents)
-
 ### Payment
 
-| Supersector | Sector | Subsector | Technology                                     | Open Source            | Maintainer | Language | Recommended |
-| ----------- | ------ | --------- | ---------------------------------------------- | ---------------------- | ---------- | -------- | ----------- |
-| Application | SaaS   | Payment   | [Braintree][braintree]                         | [GitHub][gh-braintree] |            | [JS][js] |             |
-| Application | SaaS   | Payment   | [Lemon Squeezy](https://www.lemonsqueezy.com/) |                        |            |          |             |
-| Application | SaaS   | Payment   | [Klarna](https://www.klarna.com/)              |                        |            |          |             |
-| Application | SaaS   | Payment   | [Paddle][paddle]                               | [GitHub][gh-paddle]    |            | [TS][ts] |             |
-| Application | SaaS   | Payment   | [Paypal][paypal]                               | [GitHub][gh-paypal]    |            | [TS][ts] |             |
-| Application | SaaS   | Payment   | [Square][square]                               | [GitHub][gh-square]    |            | [TS][ts] |             |
-| Application | SaaS   | Payment   | [Stripe][stripe]                               | [GitHub][gh-stripe]    |            | [TS][ts] |             |
+| Supersector | Sector | Subsector | Technology                        | Open Source | Maintainer | Language | Recommended |
+| ----------- | ------ | --------- | --------------------------------- | ----------- | ---------- | -------- | ----------- |
+| Application | SaaS   | Payment   | [Klarna](https://www.klarna.com/) |             |            |          |             |
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
 ## DevOps
-
-### Serverless
-
-| Supersector | Sector     | Subsector | Technology                               | Open Source           | Maintainer               | Language | Recommended |
-| ----------- | ---------- | --------- | ---------------------------------------- | --------------------- | ------------------------ | -------- | ----------- |
-| Application | Serverless |           | [Cloudflare Workers][cloudflare-workers] |                       | [Cloudflare][cloudflare] |          |             |
-| Application | Serverless |           | [Deno Deploy][deno-deploy]               |                       |                          |          |             |
-| Application | Serverless |           | [Fly][fly]                               | [GitHub][gh-superfly] | [Fly][fly]               |          |             |
-| Application | Serverless |           | [Netlify][netlify]                       | [GitHub][gh-netlify]  | [Netlify][netlify]       |          |             |
-| Application | Serverless |           | [Vercel][vercel]                         | [GitHub][gh-vercel]   | [Vercel][vercel]         |          | Recommended |
-
-[⬆️ Back to Table of Contents](#table-of-contents)
 
 ### Operating System
 
@@ -225,9 +158,7 @@
 
 <!-- Database -->
 
-[apache-cassandra]: https://cassandra.apache.org
 [apache-couchdb]: https://couchdb.apache.org
-[apache-hbase]: https://hbase.apache.org
 [apache-solr]: https://solr.apache.org
 [aws-dynamodb]: https://aws.amazon.com/dynamodb/
 [cockroachdb]: https://www.cockroachlabs.com
