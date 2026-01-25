@@ -28,7 +28,6 @@
 - Inspired By
   - [Auth.js](https://authjs.dev/)
   - [BetterAuth](https://www.better-auth.com/)
-  - [Clerk](https://clerk.com/)
 - Single Sign-on (SSO)
   - [Google](https://www.google.com/)
   - [Facebook](https://www.facebook.com/)
@@ -39,7 +38,6 @@
 
 <!-- Company -->
 
-[google]: https://www.google.com/
 [microsoft]: https://www.microsoft.com/
 
 <!-- Languages -->
