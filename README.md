@@ -51,13 +51,4 @@
 <!-- Hybrid -->
 
 [capacitor]: https://capacitorjs.com/
-[ionic]: https://ionicframework.com/
-
-<!-- Database -->
-
-[hypermode]: https://hypermode.com/
-[hypermode-badger]: https://docs.hypermode.com/badger/overview
-[meta]: https://opensource.fb.com/
-[rocksdb]: https://rocksdb.org/
-
-[gh-leveldb]: https://github.com/google/leveldb
+[ionic]: https://ionic
