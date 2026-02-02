@@ -57,7 +57,7 @@
 		"@types/node": "25.2.0",
 		"@types/react": "19.2.10",
 		"@types/react-dom": "19.2.3",
-		"daisyui": "5.5.14",
+		"daisyui": "5.5.16",
 		"eslint": "9.39.2",
 		"eslint-config-next": "16.1.6",
 		"fake-indexeddb": "6.2.5",
