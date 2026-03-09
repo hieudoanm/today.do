@@ -2,7 +2,20 @@
   "recommendations": [
     "charliermarsh.ruff",
     "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
-    "golang.go"
+    "golang.go",
+    "GitHub.vscode-pull-request-github",
+    "GraphQL.vscode-graphql",
+    "GraphQL.vscode-graphql-syntax",
+    "hashicorp.terraform",
+    "mechatroner.rainbow-csv",
+    "ms-python.python",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.wordcount",
+    "prisma.prisma",
+    "SonarSource.sonarlint-vscode",
+    "redhat.vscode-yaml",
+    "rust-lang.rust-analyzer"
   ]
 }
