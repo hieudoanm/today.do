@@ -19,6 +19,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 		<>
 			<Head>
 				<title>today.do</title>
+				<link rel="icon" href="/favicon.ico" />
+				<link rel="manifest" href="/manifest.json" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className={`${geistSans.className} ${geistMono.className}`}>
 				<Component {...pageProps} />
