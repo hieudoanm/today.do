@@ -1,11 +1,8 @@
 {
   "recommendations": [
-    "angular.ng-template",
+    "charliermarsh.ruff",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "eamodio.gitlens",
-    "github.vscode-pull-request-github",
-    "ms-azuretools.vscode-docker",
-    "streetsidesoftware.code-spell-checker"
+    "golang.go"
   ]
 }
