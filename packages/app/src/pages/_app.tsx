@@ -1,4 +1,4 @@
-import '@today.do/styles/globals.css';
+import '@tasks/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
@@ -18,7 +18,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Head>
-				<title>today.do</title>
+				<title>tasks</title>
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="manifest" href="/manifest.json" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />

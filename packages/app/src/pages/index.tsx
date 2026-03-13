@@ -1,7 +1,7 @@
 import {
 	LandingContent,
 	LandingTemplate,
-} from '@today.do/templates/LandingTemplate';
+} from '@tasks/templates/LandingTemplate';
 import { NextPage } from 'next';
 
 const content: LandingContent = {

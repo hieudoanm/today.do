@@ -1,4 +1,4 @@
-import { Home } from '@today.do/routes/Home';
+import { Home } from '@tasks/routes/Home';
 import { NextPage } from 'next';
 
 const AppPage: NextPage = () => {

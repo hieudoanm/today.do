@@ -1,17 +1,17 @@
 {
-  "name": "@today.do/workspace",
+  "name": "@tasks/workspace",
   "version": "0.0.1",
-  "description": "today.do",
+  "description": "Tasks",
   "keywords": [
-    "today.do"
+    "tasks"
   ],
-  "homepage": "https://hieudoanm.github.io/today.do",
+  "homepage": "https://hieudoanm.github.io/tasks",
   "bugs": {
-    "url": "https://github.com/hieudoanm/today.do/issues"
+    "url": "https://github.com/hieudoanm/tasks/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hieudoanm/today.do.git"
+    "url": "git+ssh://git@github.com/hieudoanm/tasks.git"
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",

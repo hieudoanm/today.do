@@ -14,7 +14,7 @@
 		"jsx": "react-jsx",
 		"incremental": true,
 		"paths": {
-			"@today.do/*": ["./src/*"]
+			"@tasks/*": ["./src/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mts"],

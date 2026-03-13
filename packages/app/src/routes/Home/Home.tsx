@@ -1,4 +1,4 @@
-import { Task, useIndexedDB } from '@today.do/hooks/useIndexedDB';
+import { Task, useIndexedDB } from '@tasks/hooks/useIndexedDB';
 import { FC, useEffect, useState } from 'react';
 import { PiPlus, PiX } from 'react-icons/pi';
 
