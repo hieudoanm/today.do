@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`LandingTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="text-base-content relative overflow-x-hidden"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+    >
+      <div
+        class="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(250,204,21,0.35)_0%,rgba(250,204,21,0.15)_35%,transparent_70%)] blur-3xl"
+      />
+    </div>
+    <div
+      class="fixed top-0 z-50 w-full transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-4"
+      >
+        <div
+          class="flex items-center justify-between px-6 py-3 transition-all duration-300 bg-transparent"
+        >
+          <div
+            class="text-xl font-bold"
+          />
+          <a
+            class="btn btn-primary btn-sm"
+            href=""
+          />
+        </div>
+      </div>
+    </div>
+    <section
+      class="flex h-screen w-screen items-center justify-center px-6 text-center"
+    >
+      <div
+        class="container mx-auto space-y-6"
+      >
+        <h1
+          class="text-5xl font-bold md:text-6xl"
+        />
+        <p
+          class="text-lg opacity-70"
+        />
+        <a
+          class="btn btn-primary btn-lg"
+          href=""
+        />
+      </div>
+    </section>
+    <section
+      class="px-6 py-24"
+    >
+      <div
+        class="container mx-auto space-y-6 text-center"
+      >
+        <h2
+          class="text-4xl font-bold"
+        />
+        <p
+          class="opacity-70"
+        />
+        <a
+          class="btn btn-primary btn-lg"
+          href=""
+        />
+      </div>
+    </section>
+    <footer
+      class="px-6 py-8"
+    >
+      <div
+        class="container mx-auto text-center text-sm opacity-60"
+      >
+        © 
+        2026
+         
+        . All rights reserved.
+      </div>
+    </footer>
+  </div>
+</div>
+`;
