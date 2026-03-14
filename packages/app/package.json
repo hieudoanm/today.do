@@ -21,8 +21,12 @@
 		"node": "25.8.1"
 	},
 	"scripts": {
+		"lint": "eslint . --fix",
+		"format": "prettier --cache --write .",
 		"predev": "rimraf .next && kill-port 3000",
 		"dev": "next dev --turbopack",
+		"pretest": "jest --clearCache",
+		"test": "jest",
 		"prebuild": "rimraf ../../docs",
 		"build": "next build --turbopack",
 		"postbuild": "touch ../../docs/.nojekyll",
@@ -31,10 +35,7 @@
 		"build:ios": "rimraf mobile/ios && cap add ios",
 		"build:mobile": "pnpm run build:android && pnpm run build:ios",
 		"prestart": "kill-port 3000",
-		"start": "next start",
-		"lint": "eslint . --fix",
-		"format": "prettier --cache --write .",
-		"test": "jest"
+		"start": "next start"
 	},
 	"dependencies": {
 		"@capacitor/android": "8.2.0",
