@@ -1,8 +1,8 @@
 {
 	"$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-	"productName": "today.do",
+	"productName": "Tasks",
 	"version": "0.0.1",
-	"identifier": "io.github.hieudoanm.today.do",
+	"identifier": "io.github.hieudoanm.tasks",
 	"build": {
 		"frontendDist": "../docs",
 		"devUrl": "http://localhost:3000",
@@ -12,7 +12,7 @@
 	"app": {
 		"windows": [
 			{
-				"title": "today.do",
+				"title": "Tasks",
 				"width": 800,
 				"height": 600,
 				"resizable": true,
