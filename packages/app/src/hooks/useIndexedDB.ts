@@ -109,7 +109,7 @@ export const useIndexedDB = <T>({
 			transaction.oncomplete = () => resolve();
 			transaction.onerror = () =>
 				reject(
-					new Error(transaction.error?.message || 'Failed to update task'),
+					new Error(transaction.error?.message || 'Failed to update task')
 				);
 		});
 	};
@@ -127,7 +127,7 @@ export const useIndexedDB = <T>({
 			transaction.oncomplete = () => resolve();
 			transaction.onerror = () =>
 				reject(
-					new Error(transaction.error?.message || 'Failed to delete task'),
+					new Error(transaction.error?.message || 'Failed to delete task')
 				);
 		});
 	};

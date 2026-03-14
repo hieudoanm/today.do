@@ -10,7 +10,7 @@ describe('ErrorTemplate', () => {
 					message: '',
 				}}
 				messages={[]}
-			/>,
+			/>
 		);
 		expect(container).toMatchSnapshot();
 	});

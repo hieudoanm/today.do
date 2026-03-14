@@ -28,7 +28,7 @@ describe('LandingTemplate', () => {
 						year: undefined,
 					},
 				}}
-			/>,
+			/>
 		);
 		expect(container).toMatchSnapshot();
 	});
