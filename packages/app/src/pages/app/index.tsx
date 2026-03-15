@@ -2,7 +2,7 @@ import { Home } from '@tasks/routes/Home';
 import { NextPage } from 'next';
 
 const AppPage: NextPage = () => {
-	return <Home />;
+  return <Home />;
 };
 
 export default AppPage;
